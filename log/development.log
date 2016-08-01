@@ -682,3 +682,63 @@ Processing by DrawingsController#index as HTML
 Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/drawings" for ::1 at 2016-07-31 21:28:19 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 103ms (Views: 74.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/drawings/new" for ::1 at 2016-07-31 21:28:20 -0400
+Processing by DrawingsController#new as HTML
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>New Drawing</h1>
+    2: <%= form_for :drawing, url: drawings_path do |f| %>
+    3: 
+    4: <% if @drawing.errors.any? %>
+    5:     <div id="error_explanation">
+    6:       <h2>
+    7:         <%= pluralize(@drawing.errors.count, "error") %> prohibited
+  
+app/views/drawings/new.html.erb:4:in `block in _app_views_drawings_new_html_erb___1766238188148055273_70252783325640'
+app/views/drawings/new.html.erb:2:in `_app_views_drawings_new_html_erb___1766238188148055273_70252783325640'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (113.6ms)
+Started GET "/drawings" for ::1 at 2016-07-31 21:28:30 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/drawings/new" for ::1 at 2016-07-31 21:30:27 -0400
+Processing by DrawingsController#new as HTML
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 107ms (Views: 68.5ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/drawings" for ::1 at 2016-07-31 21:30:29 -0400
+Processing by DrawingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DhdFxJg2RESq2BrEb4C7Ikw7/NGWjSh9VggNJb6Bbx9hJ96daypCx4eQSteX6N0kfkNUuTsoLqCUkTNBGPK7ww==", "drawing"=>{"title"=>"", "description"=>"", "location"=>""}, "commit"=>"Save Drawing"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 61ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+

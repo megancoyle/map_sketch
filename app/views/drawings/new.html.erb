@@ -1,5 +1,20 @@
 <h1>New Drawing</h1>
 <%= form_for :drawing, url: drawings_path do |f| %>
+
+<% if @drawing.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@drawing.errors.count, "error") %> prohibited
+        this drawing from being saved:
+      </h2>
+      <ul>
+        <% @drawing.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

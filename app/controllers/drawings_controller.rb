@@ -8,13 +8,17 @@ class DrawingsController < ApplicationController
   end
 
   def new
+    @drawing = Drawing.new
   end
 
   def create
     @drawing = Drawing.new(drawing_params)
 
-    @drawing.save
-    redirect_to @drawing
+    if @drawing.save
+      redirect_to @drawing
+    else
+      render 'new'
+    end
   end
 
   private
