@@ -1,3 +1,7 @@
+<% @drawing.errors.full_messages.each do |message| %>
+  <p><%= message %></p>
+<% end %>
+
 <%= form_for([@drawing, @drawing.comments.build]) do |f| %>
   <p>
     <%= f.label :commenter %><br>

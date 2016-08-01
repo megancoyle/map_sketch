@@ -17,9 +17,8 @@ class DrawingsController < ApplicationController
 
   def create
     @drawing = Drawing.new(drawing_params)
-    flash[:notice] = "New drawing was created."
-
     if @drawing.save
+      flash[:notice] = "New drawing was created."
       redirect_to @drawing
     else
       render 'new'
