@@ -14,31 +14,9 @@
 </p>
 
 <h2>Comments</h2>
-<% @drawing.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
+<%= render @drawing.comments %>
 
 <h2>Add a comment:</h2>
-<%= form_for([@drawing, @drawing.comments.build]) do |f| %>
-  <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-  </p>
-  <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<%= render 'comments/form' %>
 
 <%= link_to 'Back', drawings_path %> | <%= link_to 'Edit', edit_drawing_path(@drawing) %>
