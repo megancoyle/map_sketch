@@ -13,8 +13,10 @@
   <%= @drawing.location %>
 </p>
 
-<h2>Comments</h2>
-<%= render @drawing.comments %>
+<% if @drawing.comments.present? %>
+  <h2>Comments</h2>
+  <%= render @drawing.comments %>
+<% end %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
