@@ -1,5 +1,7 @@
 <h1>All the Drawings</h1>
 
+<%= link_to 'New Drawing(+)', new_drawing_path %>
+
 <% @drawings.each do |drawing| %>
   <p><%= link_to drawing.title, drawing_path(drawing) %></p>
 <% end %>
