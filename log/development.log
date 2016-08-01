@@ -2432,3 +2432,27 @@ Processing by DrawingsController#show as HTML
 Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/drawings/3" for ::1 at 2016-08-01 11:08:40 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [1 times] (4.0ms)
+  Rendered comments/_form.html.erb (9.6ms)
+  Rendered drawings/show.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 126ms (Views: 104.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 11:08:54 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [1 times] (1.3ms)
+  Rendered comments/_form.html.erb (3.8ms)
+  Rendered drawings/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 59ms (Views: 52.8ms | ActiveRecord: 0.9ms)
+
+
