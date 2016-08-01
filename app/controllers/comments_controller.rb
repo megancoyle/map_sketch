@@ -1,3 +1,12 @@
 class CommentsController < ApplicationController
-  
+  def create
+    @drawing = Drawing.find(params[:drawing_id])
+    @comment = @drawing.comments.create(comment_params)
+    redirect_to drawing_path(@drawing)
+  end
+
+  private
+  def comment_params
+    params.require(:comment).permit(:commenter, :body)
+  end
 end
