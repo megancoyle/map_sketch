@@ -938,3 +938,55 @@ Processing by DrawingsController#index as HTML
 Completed 200 OK in 45ms (Views: 41.7ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/drawings" for ::1 at 2016-07-31 22:09:45 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (17.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 219ms (Views: 128.5ms | ActiveRecord: 59.3ms)
+
+
+Started DELETE "/drawings/2" for ::1 at 2016-07-31 22:09:50 -0400
+Processing by DrawingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WqS2iP1ZhXAoIDdImCzJ2KwZWq9K16vVQ/ntf5s8dMB0aUK1s+l0977GXa9ATGfd6bEzApLZkRrwBqEmMFTagg==", "id"=>"2"}
+  [1m[36mDrawing Load (9.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (3.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.7ms)[0m  [1m[31mDELETE FROM "drawings" WHERE "drawings"."id" = $1[0m  [["id", 2]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings
+Completed 302 Found in 43ms (ActiveRecord: 27.5ms)
+
+
+Started GET "/drawings" for ::1 at 2016-07-31 22:09:50 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.4ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/drawings/1" for ::1 at 2016-07-31 22:09:53 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  Rendered drawings/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 52ms (Views: 46.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-07-31 22:09:54 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (3.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 58ms (Views: 48.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/drawings" for ::1 at 2016-07-31 22:10:09 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.1ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 114ms (Views: 98.1ms | ActiveRecord: 1.1ms)
+
+

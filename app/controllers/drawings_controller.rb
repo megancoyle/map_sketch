@@ -35,6 +35,13 @@ class DrawingsController < ApplicationController
     end
   end
 
+  def destroy
+    @drawing = Drawing.find(params[:id])
+    @drawing.destroy
+
+    redirect_to drawings_path
+  end
+
   private
     def drawing_params
       params.require(:drawing).permit(:title, :description, :location)

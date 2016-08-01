@@ -3,5 +3,6 @@
 <%= link_to 'New Drawing(+)', new_drawing_path %>
 
 <% @drawings.each do |drawing| %>
-  <p><%= link_to drawing.title, drawing_path(drawing) %> | <%= link_to 'Edit', edit_drawing_path(drawing) %></p>
+  <p><%= link_to drawing.title, drawing_path(drawing) %> | <%= link_to 'Edit', edit_drawing_path(drawing) %> | <%= link_to 'Delete', drawing_path(drawing), method: :delete,
+  data: { confirm: 'Are you sure you want to delete this?'} %></p>
 <% end %>
