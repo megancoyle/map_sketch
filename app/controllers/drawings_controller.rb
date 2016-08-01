@@ -3,6 +3,15 @@ class DrawingsController < ApplicationController
   end
 
   def create
-    render plain: params[:drawing].inspect
+    @drawing = Drawing.new(drawing_params)
+
+    @drawing.save
+    redirect_to @drawing
   end
+
+  private
+    def drawing_params
+      params.require(:drawing).permit(:title, :description, :location)
+    end
+
 end

@@ -351,3 +351,120 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+Started GET "/drawings/new" for ::1 at 2016-07-31 20:56:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DrawingsController#new as HTML
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 77ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drawings" for ::1 at 2016-07-31 20:56:53 -0400
+Processing by DrawingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p2n6/JDFXKaKKyhZaTUQyGyw7OhfhzaTf+hZtPB0sMiJpA7B3nWtIRzNQr6xVb7NKRiFRYeJDFzMFxXtWxweig==", "drawing"=>{"title"=>"Drawing 1", "description"=>"Here it goes!", "location"=>"Arlington, VA"}, "commit"=>"Save Drawing"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant DrawingsController::Article):
+  
+app/controllers/drawings_controller.rb:6:in `create'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.5ms)
+Started POST "/drawings" for ::1 at 2016-07-31 20:57:10 -0400
+Processing by DrawingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p2n6/JDFXKaKKyhZaTUQyGyw7OhfhzaTf+hZtPB0sMiJpA7B3nWtIRzNQr6xVb7NKRiFRYeJDFzMFxXtWxweig==", "drawing"=>{"title"=>"Drawing 1", "description"=>"Here it goes!", "location"=>"Arlington, VA"}, "commit"=>"Save Drawing"}
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 15.2ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/drawings_controller.rb:6:in `create'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.2ms)
+Started GET "/drawings/new" for ::1 at 2016-07-31 20:59:44 -0400
+Processing by DrawingsController#new as HTML
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 74ms (Views: 69.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drawings" for ::1 at 2016-07-31 20:59:54 -0400
+Processing by DrawingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uZrcJaw6ilzixDGb7SQn+SrO2NF/jRtDY2SMD6R21vyXVygY4op723QiW3w1RIn8b2axfKeDIYzQm8BWDx54vg==", "drawing"=>{"title"=>"Drawing 1", "description"=>"blah blah blah", "location"=>"NYC"}, "commit"=>"Save Drawing"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "drawings" ("title", "description", "location", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Drawing 1"], ["description", "blah blah blah"], ["location", "NYC"], ["created_at", 2016-08-01 00:59:54 UTC], ["updated_at", 2016-08-01 00:59:54 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/1
+Completed 302 Found in 64ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/drawings/1" for ::1 at 2016-07-31 20:59:54 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for DrawingsController):
+  
+actionpack (5.0.0) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.0) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.7ms)
