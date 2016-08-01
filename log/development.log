@@ -312,3 +312,18 @@ Processing by DrawingsController#new as HTML
 Completed 200 OK in 158ms (Views: 147.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/drawings/new" for ::1 at 2016-07-31 20:38:24 -0400
+Processing by DrawingsController#new as HTML
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 80ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drawings" for ::1 at 2016-07-31 20:38:27 -0400
+Processing by DrawingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SV0V4/6Qb/T4/uqSQdx0fUdCgpDN4IkyZmN/+kkjjd9nkOHesCCec24YgHWZvNp4AurrPRXus/3VnDOj4ksjnQ==", "drawing"=>{"title"=>"", "description"=>"", "location"=>""}, "commit"=>"Save Drawing"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
