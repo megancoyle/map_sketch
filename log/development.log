@@ -1584,3 +1584,251 @@ Processing by DrawingsController#show as HTML
 Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/drawings/1" for ::1 at 2016-08-01 09:02:47 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (1.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 1]]
+  Rendered collection of comments/_comment.html.erb [1 times] (2.4ms)
+  Rendered comments/_form.html.erb (5.6ms)
+  Rendered drawings/show.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 112ms (Views: 80.1ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/drawings/1/comments/7" for ::1 at 2016-08-01 09:02:50 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vloiP5rZDyWydL2JeG8tML2O7PLc1gFHfooTTfbZMs6Ql9YC1Gn+oiSS126gD4M1+CaFXwTYO4jNdV8UXbGcjA==", "drawing_id"=>"1", "id"=>"7"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["drawing_id", 1], ["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/1
+Completed 302 Found in 12ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/drawings/1" for ::1 at 2016-08-01 09:02:50 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (0.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (3.6ms)
+  Rendered drawings/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 51ms (Views: 45.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-01 09:02:54 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 48ms (Views: 42.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/drawings/1" for ::1 at 2016-08-01 09:02:55 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (1.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 1]]
+  Rendered collection of templates [0 times] (0.1ms)
+  Rendered comments/_form.html.erb (7.8ms)
+  Rendered drawings/show.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 72ms (Views: 64.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-01 09:02:57 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 57ms (Views: 33.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drawings/1" for ::1 at 2016-08-01 09:02:58 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (4.9ms)
+  Rendered drawings/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 50ms (Views: 44.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-01 09:03:00 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 09:03:01 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [6 times] (3.0ms)
+  Rendered comments/_form.html.erb (4.9ms)
+  Rendered drawings/show.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 66ms (Views: 56.6ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/drawings/3/comments/1" for ::1 at 2016-08-01 09:03:03 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tG24enQWblCmGNlL0C3HjEVesu2PgrgBFlHtVV5hCFSaoExHOqaf1zD+s6wITWmJAPbbQFeMgs6lrqEM9QmmFg==", "drawing_id"=>"3", "id"=>"1"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["drawing_id", 3], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/3
+Completed 302 Found in 15ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 09:03:04 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [5 times] (1.9ms)
+  Rendered comments/_form.html.erb (4.1ms)
+  Rendered drawings/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/drawings/3/comments/2" for ::1 at 2016-08-01 09:03:06 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AYaBaDL9l3wPosLuBjjSuBN8hoNDz8PVP334D7yVHQovS3VVfE1m+5lEqAneWHy9VtTvLpvB+RqMgrRWF/2zSA==", "drawing_id"=>"3", "id"=>"2"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["drawing_id", 3], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/3
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 09:03:06 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [4 times] (1.2ms)
+  Rendered comments/_form.html.erb (2.9ms)
+  Rendered drawings/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/drawings/3/comments/3" for ::1 at 2016-08-01 09:03:08 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pV224xZEckB/JeUmbNwueyhsqybnG9zvkgFXO6TyAfiLkELeWPSDx+nDj8G0vIB+bcTCiz8V5iAh/htiD5qvug==", "drawing_id"=>"3", "id"=>"3"}
+  [1m[36mDrawing Load (0.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["drawing_id", 3], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/3
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 09:03:08 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [3 times] (1.9ms)
+  Rendered comments/_form.html.erb (2.7ms)
+  Rendered drawings/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/drawings/3/comments/4" for ::1 at 2016-08-01 09:03:10 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PQisY5A8xo21hcBBQwhLhhS0tkQ2sT51wmzmVCniuZATxVhe3ow3CiNjqqabaOWDURzf6e6/BLpxk6oNgooX0g==", "drawing_id"=>"3", "id"=>"4"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["drawing_id", 3], ["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 4]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/3
+Completed 302 Found in 10ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 09:03:11 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [2 times] (1.0ms)
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered drawings/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/drawings/3/comments/5" for ::1 at 2016-08-01 09:03:13 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GbpBC+BNJfStoGe75iNhbezoDrsiO60tV+NwBrjsGX43d7U2rv3UcztGDVw+Q89oqUBnFvo1l+LkHDxfE4S3PA==", "drawing_id"=>"3", "id"=>"5"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["drawing_id", 3], ["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/3
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 09:03:13 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of comments/_comment.html.erb [1 times] (0.9ms)
+  Rendered comments/_form.html.erb (4.5ms)
+  Rendered drawings/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 40ms (Views: 36.3ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/drawings/3/comments/6" for ::1 at 2016-08-01 09:03:16 -0400
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BU544Prl0jlteMW2k7y087D9BcVXzWIjiVJpxyNZGXArg4zdtFUjvvuer1FL3Br29VVsaI/DWOw6rSWeiDG3Mg==", "drawing_id"=>"3", "id"=>"6"}
+  [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1 AND "comments"."id" = $2 LIMIT $3[0m  [["drawing_id", 3], ["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/3
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/drawings/3" for ::1 at 2016-08-01 09:03:16 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 3]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered comments/_form.html.erb (2.7ms)
+  Rendered drawings/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-01 09:03:17 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 73ms (Views: 68.5ms | ActiveRecord: 0.8ms)
+
+
