@@ -7,6 +7,7 @@
 canvas {
   border: 1px solid black;
   cursor: default;
+  width: 100%;
 }
 
  /* Header and Nav */
@@ -112,6 +113,21 @@ body.welcome {
   text-align: center;
 }
 
+/* Drawing Page */
+.edit-icons {
+  text-align: right;
+}
+
+/* Comment */
+.comment {
+  max-width: 600px;
+  margin: auto;
+  border-bottom: 1px solid #b3b3b3;
+}
+.comment a {
+  text-align: right;
+}
+
 /* Form Styling */
 .form-block {
     max-width: 500px;
@@ -162,3 +178,6 @@ body.welcome {
 
 .alert  { color: red;  }
 .notice { color: blue; }
+#error_explanation {
+  color: red;
+}

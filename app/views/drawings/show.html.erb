@@ -1,5 +1,7 @@
 <h1><%= @drawing.title %></h1>
-
+<div class="edit-icons">
+  <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %>
+</div>
 <p>
   <strong>Description:</strong>
   <%= @drawing.description %>
@@ -11,7 +13,7 @@
 </p>
 
 <div class="drawing">
-    <canvas width="600" height="400" id="cvs"></canvas>
+    <canvas width="600" height="320" id="cvs"></canvas>
     <div>
         <p>
             <button id="save">save</button> or <button id="convert">convert to</button> as:
@@ -38,5 +40,3 @@
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
-
-<%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %>

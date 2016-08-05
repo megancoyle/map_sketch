@@ -2,10 +2,6 @@
 
 <% if @drawing.errors.any? %>
     <div id="error_explanation">
-      <h2>
-        <%= pluralize(@drawing.errors.count, "error") %> prohibited
-        this drawing from being saved:
-      </h2>
       <ul>
         <% @drawing.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>

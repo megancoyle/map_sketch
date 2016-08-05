@@ -1,14 +1,15 @@
+<div class="comment">
 <p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
+  <strong><%= comment.commenter %></strong>
+
 </p>
 
 <p>
-  <strong>Comment:</strong>
   <%= comment.body %>
 </p>
 
 <p>
-  <%= link_to 'Delete Comment', [comment.drawing, comment],
+  <%= link_to 'Delete', [comment.drawing, comment],
                method: :delete, :class => 'fa fa-trash-o' %>
 </p>
+</div>
