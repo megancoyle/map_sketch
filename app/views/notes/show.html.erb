@@ -1,0 +1,9 @@
+<h1><%= @note.title %></h1>
+<div class="edit-icons">
+  <%= link_to 'Back', [@note.drawing, @drawing], :class => 'fa fa-arrow-left' %> <%= link_to 'Delete Note', [@note.drawing, @note],
+               method: :delete,
+               :class => 'fa fa-trash-o' %> <%= link_to 'Edit Note', edit_drawing_note_path(@note.drawing, @note), :class => 'fa fa-pencil-square-o' %>
+</div>
+<div class="detail-page">
+<p><%= @note.body %></p>
+</div>

@@ -1,6 +1,6 @@
 <h1><%= @drawing.title %></h1>
 <div class="edit-icons">
-  <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %>
+  <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %> <%= link_to 'Add a Note', new_drawing_note_path(@drawing), :class => 'fa fa-comment' %>
 </div>
 
 <div class="space-layout">
@@ -37,6 +37,17 @@
   </div>
 
 </div>
+
+<% if @drawing.notes.present? %>
+    <h2>Notes</h2>
+    <% @drawing.notes.each do |note| %>
+      <div class="note">
+        <p><strong><%= link_to note.title, drawing_note_path(@drawing, note) %></strong></p>
+        <p><%= note.body %></p>
+      </div>
+    <% end %>
+<% end %>
+
   <% if @drawing.comments.present? %>
     <h2>Comments</h2>
     <%= render @drawing.comments %>

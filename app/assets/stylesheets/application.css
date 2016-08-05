@@ -116,13 +116,16 @@ body.welcome {
 .edit-icons {
   text-align: right;
 }
+.edit-icons a {
+  color: black;
+}
 .space-layout {
   max-width: 600px;
   margin: auto;
 }
 
-/* Comment */
-.comment {
+/* Comments and Notes */
+.comment, .note {
   max-width: 600px;
   margin: auto;
   border-bottom: 1px solid #b3b3b3;
