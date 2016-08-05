@@ -5881,3 +5881,14 @@ Processing by DrawingsController#show as HTML
 Completed 200 OK in 250ms (Views: 231.0ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/drawings/1" for ::1 at 2016-08-05 11:27:58 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (5.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 1]]
+  Rendered comments/_form.html.erb (17.9ms)
+  Rendered drawings/show.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 178ms (Views: 148.9ms | ActiveRecord: 5.7ms)
+
+
