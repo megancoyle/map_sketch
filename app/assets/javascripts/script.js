@@ -15,6 +15,7 @@ var canvas, ctx, bMouseIsDown = false, iLastX, iLastY,
         bind();
     }
     function bind () {
+        var completeDrawing = []
         canvas.onmousedown = function(e) {
             bMouseIsDown = true;
             iLastX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
