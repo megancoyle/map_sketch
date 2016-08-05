@@ -41,7 +41,7 @@ nav a {
 body {
   padding: 0;
   margin: 0;
-  background: url('/images/project-desk.jpg');
+  background: url('/images/drafting.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
@@ -108,9 +108,51 @@ body.welcome {
 .banner {
   max-width: 600px;
   margin: auto;
-  margin-top: 16%;
+  margin-top: 14%;
   text-align: center;
 }
+
+/* Form Styling */
+.form-block {
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.form-block input, .form-block select {
+  height: 30px;
+}
+.form-block textarea {
+  height: 60px;
+}
+
+.form-block input, .form-block textarea, .form-block select {
+    width: 100%;
+    border: 1px solid #ff8080;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+.form-block input[type="submit"] {
+    padding: 0 10px 0 10px;
+    width: auto;
+    min-width: 250px;
+    cursor: pointer;
+    color: white;
+    background: #ff8080;
+}
+.form-block input[type="submit"]:hover {
+  background: #ff4d4d;
+}
+.form-block input[type='checkbox'] {
+  width: auto;
+}
+.form-block .field {
+    margin-bottom: 15px;
+}
+
 
 /* Notification Messages */
 .flash {
