@@ -3508,3 +3508,57 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 736ms (Views: 729.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/drawings" for ::1 at 2016-08-04 19:51:44 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (28.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (119.9ms)
+Completed 200 OK in 305ms (Views: 122.6ms | ActiveRecord: 82.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-04 19:58:04 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'font-awesome' with type 'text/css'
+Checked in these paths: 
+  /Users/mcoyle/wdi/projects/map_sketch/app/assets/config
+  /Users/mcoyle/wdi/projects/map_sketch/app/assets/images
+  /Users/mcoyle/wdi/projects/map_sketch/app/assets/javascripts
+  /Users/mcoyle/wdi/projects/map_sketch/app/assets/stylesheets
+  /Users/mcoyle/wdi/projects/map_sketch/vendor/assets/javascripts
+  /Users/mcoyle/wdi/projects/map_sketch/vendor/assets/stylesheets
+  /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actioncable-5.0.0/lib/assets/compiled
+  /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/turbolinks-source-5.0.0/lib/assets/javascripts):
+    4:     <title>MapSketch</title>
+    5:     <%# encoding: utf-8 %>
+    6:     <%= csrf_meta_tags %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css:2
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2685285791898847760_70317802368360'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (24.4ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (147.9ms)
+Started GET "/" for ::1 at 2016-08-04 20:00:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (4.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 1600ms (Views: 1573.6ms | ActiveRecord: 0.0ms)
+
+
