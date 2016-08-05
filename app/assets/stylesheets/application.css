@@ -1,50 +1,59 @@
 /*
  *= require font-awesome
  */
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(https://fonts.googleapis.com/css?family=Catamaran:400,700,300);
+
 canvas {
   border: 1px solid black;
   cursor: default;
 }
 
  /* Header and Nav */
- header, footer {
+ /*header, footer {
    background: #ff8080;
- }
+ }*/
  h1#logo {
   margin: 0;
   display: inline-block;
-  padding: 15px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ff8080;
 }
 #logo a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 1.1em;
 }
 nav {
   float: right;
   padding-top: 20px;
+  font-family: 'Quicksand', sans-serif;
+  text-transform: lowercase;
 }
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 10px;
   font-size: 1.2em;
+  font-weight: 700;
 }
 /* Main Content */
 body {
   padding: 0;
   margin: 0;
-  /*background: url('/images/sketch.jpg');*/
+  background: url('/images/project-desk.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  font-family: 'Catamaran', sans-serif;
 }
 .content {
   background: rgba(255,255,255,0.8);
-  padding: 0 20px 20px 20px;
+  padding: 20px;
+  margin-top: 15px;
   min-height: 500px;
 }
 .container {
@@ -55,6 +64,11 @@ body {
 }
 a {
   text-decoration: none;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Quicksand', sans-serif;
+  text-transform: lowercase;
+  text-align: center;
 }
 
 /* Design Elements for Functionality */
@@ -76,8 +90,26 @@ body.welcome {
   -o-background-size: cover;
   background-size: cover;
 }
+.welcome h2 {
+  font-size: 3.2em;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+.welcome h3 {
+  font-size: 2.6em;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
 .welcome .content {
     background: transparent;
+}
+.banner {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 16%;
+  text-align: center;
 }
 
 /* Notification Messages */

@@ -16,6 +16,7 @@ var canvas, ctx, bMouseIsDown = false, iLastX, iLastY,
     }
     function bind () {
         var completeDrawing = []
+
         canvas.onmousedown = function(e) {
             bMouseIsDown = true;
             iLastX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
@@ -46,8 +47,6 @@ var canvas, ctx, bMouseIsDown = false, iLastX, iLastY,
                 strokeColor = '#' + this.value;
                 console.log(this.value);
                 });
-
-        console.log(strokeColor);
 
         $save.onclick = function (e) {
             var type = $sel.value,
