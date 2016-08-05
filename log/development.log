@@ -4810,3 +4810,307 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/drawings" for ::1 at 2016-08-05 07:59:06 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 150ms (Views: 137.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:59:09 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 08:21:07 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (16.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 222ms (Views: 187.9ms | ActiveRecord: 16.8ms)
+
+
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3225134634285681705);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (5.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20160805124721)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (100.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160805124721"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3225134634285681705)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'comments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'drawings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/users/sign_up" for ::1 at 2016-08-05 08:47:50 -0400
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x007fe359c135d8>):
+  
+config/routes.rb:2:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (16.4ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (144.8ms)
+Started GET "/users/sign_up" for ::1 at 2016-08-05 08:48:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (119.8ms)
+Completed 200 OK in 1027ms (Views: 963.7ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-05 08:50:44 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.3ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 102ms (Views: 88.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-05 08:50:58 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 08:51:00 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 69ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 08:51:02 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (4.7ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 118ms (Views: 56.2ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-05 08:51:04 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-05 08:51:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 95ms (Views: 84.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-05 08:51:10 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2016-08-05 08:51:25 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r9VPwHbmLjO7NCGuuODY+GztNopReAwfbaxgYn0DoCTmlCBfiPnNWW0fHrXuPfsq+wH+XocX0r3tA+kwts3FKw==", "user"=>{"email"=>"123@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (4.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "123@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "123@test.com"], ["encrypted_password", "$2a$11$Lg.74PXF3qyjdeqIVAtehO.G/pSdC7pst6ycc2sKAaJ7O6.RzZTxW"], ["created_at", 2016-08-05 12:51:25 UTC], ["updated_at", 2016-08-05 12:51:25 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2016-08-05 12:51:25 UTC], ["last_sign_in_at", 2016-08-05 12:51:25 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", 2016-08-05 12:51:25 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 441ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 08:51:25 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 60.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 08:51:32 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 32.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/users/edit" for ::1 at 2016-08-05 08:51:34 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/edit.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 53ms (Views: 45.4ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-08-05 08:51:44 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NGYMRNYNFh7WWfJaICJu5BuJQ2BVoyz9NtRsmNwSvOB9J2PbKBL1dAByzUF2/002jGWLtIPM8l+2e+XKF9zZ7w=="}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 08:51:44 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 08:51:47 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 08:53:15 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 586ms (Views: 568.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 08:53:19 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 68ms (Views: 40.8ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-05 08:53:20 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (217.6ms)
+Completed 200 OK in 352ms (Views: 277.6ms | ActiveRecord: 37.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-05 08:53:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 80ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 08:53:23 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 08:53:30 -0400
+Processing by DrawingsController#index as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-05 08:53:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.1ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 84ms (Views: 53.7ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 08:53:32 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 09:06:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 648ms (Views: 606.2ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 09:06:26 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.6ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 67ms (Views: 57.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 09:06:28 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 09:06:30 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+

@@ -1,4 +1,5 @@
 class DrawingsController < ApplicationController
+  # before_action :authenticate_user!
   def index
     @drawings = Drawing.all
   end
