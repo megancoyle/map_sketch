@@ -10,6 +10,5 @@
 
 <p>
   <%= link_to 'Delete Comment', [comment.drawing, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               method: :delete, :class => 'fa fa-trash-o' %>
 </p>

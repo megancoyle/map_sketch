@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @drawing = Drawing.find(params[:drawing_id])
     @comment = @drawing.comments.find(params[:id])
     @comment.destroy
-    redirect_to drawing_path(@drawing)
+    redirect_to drawing_path(@drawing), alert: "The comment has been deleted."
   end
 
   private

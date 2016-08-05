@@ -1,6 +1,9 @@
 /*
  *= require font-awesome
  */
+canvas {
+  border: 1px solid black;
+}
 
  /* Header and Nav */
  header, footer {
@@ -48,6 +51,19 @@ body {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+/* Design Elements for Functionality */
+.fa:before {
+    margin-right: 5px;
+    margin-left: 20px;
+}
+ /*plus sign styling */
+.fa-plus-circle:before {
+    margin-left: 0 !important;
 }
 
 /* Homepage */

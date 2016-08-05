@@ -1,8 +1,7 @@
-<h1>All the Drawings</h1>
+<h1>What Will You Create Today?</h1>
 
-<%= link_to 'New Drawing(+)', new_drawing_path %>
+<%= link_to 'Make a New Drawing', new_drawing_path, :class => 'fa fa-plus-circle' %>
 
 <% @drawings.each do |drawing| %>
-  <p><%= link_to drawing.title, drawing_path(drawing) %> | <%= link_to 'Edit', edit_drawing_path(drawing) %> | <%= link_to 'Delete', drawing_path(drawing), method: :delete,
-  data: { confirm: 'Are you sure you want to delete this?'} %></p>
+  <p><%= link_to drawing.title, drawing_path(drawing) %> <%= link_to 'Edit', edit_drawing_path(drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(drawing), method: :delete, :class => 'fa fa-trash-o' %></p>
 <% end %>

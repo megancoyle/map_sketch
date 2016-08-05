@@ -1,7 +1,4 @@
-<p>
-  <strong>Title:</strong>
-  <%= @drawing.title %>
-</p>
+<h1><%= @drawing.title %></h1>
 
 <p>
   <strong>Description:</strong>
@@ -12,11 +9,6 @@
   <strong>Location:</strong>
   <%= @drawing.location %>
 </p>
-
-<% if @drawing.comments.present? %>
-  <h2>Comments</h2>
-  <%= render @drawing.comments %>
-<% end %>
 
 <div class="drawing">
     <canvas width="600" height="400" id="cvs"></canvas>
@@ -37,8 +29,12 @@
 
     </div>
 </div>
+<% if @drawing.comments.present? %>
+  <h2>Comments</h2>
+  <%= render @drawing.comments %>
+<% end %>
 
 <h2>Add a comment:</h2>
 <%= render 'comments/form' %>
 
-<%= link_to 'Back', drawings_path %> | <%= link_to 'Edit', edit_drawing_path(@drawing) %>
+<%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %>

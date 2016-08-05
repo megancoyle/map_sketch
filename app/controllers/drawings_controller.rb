@@ -18,8 +18,7 @@ class DrawingsController < ApplicationController
   def create
     @drawing = Drawing.new(drawing_params)
     if @drawing.save
-      flash[:notice] = "New drawing was created."
-      redirect_to @drawing
+      redirect_to @drawing, notice: "New drawing was created."
     else
       render 'new'
     end
@@ -29,7 +28,7 @@ class DrawingsController < ApplicationController
     @drawing = Drawing.find(params[:id])
 
     if @drawing.update(drawing_params)
-      redirect_to @drawing
+      redirect_to @drawing, notice: "The drawing has been updated."
     else
       render 'edit'
     end
@@ -39,7 +38,7 @@ class DrawingsController < ApplicationController
     @drawing = Drawing.find(params[:id])
     @drawing.destroy
 
-    redirect_to drawings_path
+    redirect_to drawings_path, alert: "Aw, snap. You deleted a drawing."
   end
 
   private
