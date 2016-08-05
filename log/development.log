@@ -3562,3 +3562,281 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 1600ms (Views: 1573.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-08-05 06:48:18 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 573ms (Views: 501.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:18:47 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 211ms (Views: 195.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:20:03 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (48.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (160.2ms)
+Completed 200 OK in 366ms (Views: 150.3ms | ActiveRecord: 120.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:20:09 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 95ms (Views: 87.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:20:10 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (4.6ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 101ms (Views: 91.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:20:11 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:20:24 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 276ms (Views: 273.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:20:54 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 133ms (Views: 125.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:21:14 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:21:48 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 160ms (Views: 151.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:21:56 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (15.6ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 102ms (Views: 82.4ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:22:45 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (7.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 139ms (Views: 128.2ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:22:47 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:22:53 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.2ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 84ms (Views: 72.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:22:56 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:22:59 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (3.9ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 73ms (Views: 65.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/drawings/1" for ::1 at 2016-08-05 07:23:16 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (5.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (4.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 1]]
+  Rendered comments/_form.html.erb (156.0ms)
+  Rendered drawings/show.html.erb within layouts/application (287.1ms)
+Completed 200 OK in 453ms (Views: 314.0ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/drawings/1" for ::1 at 2016-08-05 07:23:30 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDrawing Load (0.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 1]]
+  Rendered comments/_form.html.erb (3.4ms)
+  Rendered drawings/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 61ms (Views: 53.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:23:41 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drawings/4" for ::1 at 2016-08-05 07:23:42 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 4]]
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered drawings/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 63ms (Views: 57.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/drawings/4" for ::1 at 2016-08-05 07:23:46 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDrawing Load (0.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 4]]
+  Rendered comments/_form.html.erb (2.7ms)
+  Rendered drawings/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 61ms (Views: 48.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/drawings/4" for ::1 at 2016-08-05 07:23:52 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 4]]
+  Rendered comments/_form.html.erb (3.5ms)
+  Rendered drawings/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:23:56 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 46ms (Views: 39.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drawings/5" for ::1 at 2016-08-05 07:23:57 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 5]]
+  Rendered comments/_form.html.erb (5.0ms)
+  Rendered drawings/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 63ms (Views: 57.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drawings/5" for ::1 at 2016-08-05 07:24:01 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 5]]
+  Rendered comments/_form.html.erb (4.4ms)
+  Rendered drawings/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 96ms (Views: 90.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/drawings/5" for ::1 at 2016-08-05 07:24:08 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 5]]
+  Rendered comments/_form.html.erb (2.8ms)
+  Rendered drawings/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:24:13 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 38.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-08-05 07:24:16 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-05 07:24:18 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/drawings/5" for ::1 at 2016-08-05 07:24:25 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDrawing Load (1.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 5]]
+  Rendered comments/_form.html.erb (4.0ms)
+  Rendered drawings/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 71ms (Views: 63.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/drawings/5" for ::1 at 2016-08-05 07:24:34 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 5]]
+  Rendered comments/_form.html.erb (3.4ms)
+  Rendered drawings/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 49ms (Views: 45.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drawings/5" for ::1 at 2016-08-05 07:24:40 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 5]]
+  Rendered comments/_form.html.erb (3.2ms)
+  Rendered drawings/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 127ms (Views: 121.6ms | ActiveRecord: 1.7ms)
+
+

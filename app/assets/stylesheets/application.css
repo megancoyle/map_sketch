@@ -2,10 +2,71 @@
  *= require font-awesome
  */
 
+ /* Header and Nav */
+ header, footer {
+   background: #ff5050;
+ }
+ h1#logo {
+  margin: 0;
+  display: inline-block;
+  padding: 15px 0;
+}
+#logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+nav {
+  float: right;
+  padding-top: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.2em;
+}
+/* Main Content */
+body {
+  padding: 0;
+  margin: 0;
+  /*background: url('/images/sketch.jpg');*/
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.content {
+  background: rgba(255,255,255,0.8);
+  padding: 0 20px 20px 20px;
+  min-height: 500px;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Homepage */
+body.welcome {
+  background: url('/images/sketch.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.welcome .content {
+    background: transparent;
+}
+
+/* Notification Messages */
 .flash {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   padding: 1em;
-  background: #eee;
 }
 
 .alert  { color: red;  }

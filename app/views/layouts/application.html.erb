@@ -6,12 +6,22 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-
-  <body>
-    <% flash.each do |type, message| %>
-      <p class="flash <%= type %>"><%= message %></p>
-    <% end %>
-    <%= yield %>
+  <header>
+    <div class="container">
+        <h1 id="logo"><%= link_to 'mapsketch', root_path %></h1>
+        <nav>
+          <%= link_to 'Drawings', drawings_path %>
+        </nav>
+    </div>
+  </header>
+  <body class="<%= controller.controller_name %>">
+    <div class="container">
+      <% flash.each do |type, message| %>
+        <p class="flash <%= type %>"><%= message %></p>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
