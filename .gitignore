@@ -1,5 +1,3 @@
 .DS_Store
 /tmp/*
 /log/*
-!/log/.keep
-!/tmp/.keep

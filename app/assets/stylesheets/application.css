@@ -7,7 +7,6 @@
 canvas {
   border: 1px solid black;
   cursor: default;
-  width: 100%;
 }
 
  /* Header and Nav */
@@ -116,6 +115,10 @@ body.welcome {
 /* Drawing Page */
 .edit-icons {
   text-align: right;
+}
+.space-layout {
+  max-width: 600px;
+  margin: auto;
 }
 
 /* Comment */

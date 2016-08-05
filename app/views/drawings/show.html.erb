@@ -2,41 +2,45 @@
 <div class="edit-icons">
   <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %>
 </div>
-<p>
-  <strong>Description:</strong>
-  <%= @drawing.description %>
-</p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @drawing.location %>
-</p>
+<div class="space-layout">
+  <p>
+    <strong>Description:</strong>
+    <%= @drawing.description %>
+  </p>
 
-<div class="drawing">
-    <canvas width="600" height="320" id="cvs"></canvas>
-    <div>
-        <p>
-            <button id="save">save</button> or <button id="convert">convert to</button> as:
-            <select id="sel">
-                <option value="png">png</option>
-                <option value="jpeg">jpeg</option>
-                <option value="bmp">bmp</option>
-            </select><br/>
-            width : <input type="number" value="300" id="imgW" /><br/>
-            height : <input type="number" value="200" id="imgH" /><br/>
-            <input name="color2" type="hidden" id="color_value" value="66ccff">
-            <button class="jscolor {valueElement: 'color_value'}">Pick a color</button>
-        </p>
+  <p>
+    <strong>Location:</strong>
+    <%= @drawing.location %>
+  </p>
 
-    </div>
-    <div id="imgs">
+  <div class="drawing">
+      <canvas width="600" height="320" id="cvs"></canvas>
+      <div>
+          <p>
+              <button id="save">save</button> or <button id="convert">convert to</button> as:
+              <select id="sel">
+                  <option value="png">png</option>
+                  <option value="jpeg">jpeg</option>
+                  <option value="bmp">bmp</option>
+              </select><br/>
+              width : <input type="number" value="300" id="imgW" /><br/>
+              height : <input type="number" value="200" id="imgH" /><br/>
+              <input name="color2" type="hidden" id="color_value" value="66ccff">
+              <button class="jscolor {valueElement: 'color_value'}">Pick a color</button>
+          </p>
 
-    </div>
+      </div>
+      <div id="imgs">
+
+      </div>
+  </div>
+
 </div>
-<% if @drawing.comments.present? %>
-  <h2>Comments</h2>
-  <%= render @drawing.comments %>
-<% end %>
+  <% if @drawing.comments.present? %>
+    <h2>Comments</h2>
+    <%= render @drawing.comments %>
+  <% end %>
 
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+  <h2>Add a comment:</h2>
+  <%= render 'comments/form' %>
