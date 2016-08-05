@@ -2,6 +2,7 @@ var canvas, ctx, bMouseIsDown = false, iLastX, iLastY,
         $save, $imgs,
         $convert, $imgW, $imgH,
         $sel;
+
     function init () {
         canvas = document.getElementById('cvs');
         ctx = canvas.getContext('2d');
@@ -31,10 +32,21 @@ var canvas, ctx, bMouseIsDown = false, iLastX, iLastY,
                 ctx.moveTo(iLastX, iLastY);
                 ctx.lineTo(iX, iY);
                 ctx.stroke();
+                ctx.strokeStyle = strokeColor;
                 iLastX = iX;
                 iLastY = iY;
             }
         };
+
+        var strokeColor = '#' + document.getElementById('color_value').value;
+        var colorPicker = document.getElementById('color_value');
+
+        document.getElementById('color_value').addEventListener('change',function(){
+                strokeColor = '#' + this.value;
+                console.log(this.value);
+                });
+
+        console.log(strokeColor);
 
         $save.onclick = function (e) {
             var type = $sel.value,
