@@ -11642,3 +11642,146 @@ Processing by DrawingsController#show as HTML
 Completed 200 OK in 125ms (Views: 118.6ms | ActiveRecord: 2.2ms)
 
 
+Started GET "/drawings/15" for ::1 at 2016-08-07 14:07:16 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mDrawing Load (4.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (0.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  Rendered comments/_form.html.erb (23.0ms)
+  Rendered drawings/show.html.erb within layouts/application (107.3ms)
+Completed 200 OK in 363ms (Views: 318.1ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/drawings/15" for ::1 at 2016-08-07 14:08:05 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mDrawing Load (10.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (5.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  Rendered comments/_form.html.erb (40.0ms)
+  Rendered drawings/show.html.erb within layouts/application (130.9ms)
+Completed 200 OK in 367ms (Views: 313.4ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/drawings/15" for ::1 at 2016-08-07 14:08:25 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mDrawing Load (10.1ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (2.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  Rendered comments/_form.html.erb (33.7ms)
+  Rendered drawings/show.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 293ms (Views: 235.9ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-07 14:08:34 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 221ms (Views: 214.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-07 14:08:36 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (16.4ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 118ms (Views: 98.3ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/drawings/15" for ::1 at 2016-08-07 14:08:38 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mDrawing Load (7.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (2.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 15]]
+  Rendered comments/_form.html.erb (7.7ms)
+  Rendered drawings/show.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 161ms (Views: 146.4ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-07 15:13:37 -0400
+Processing by DrawingsController#index as HTML
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant CarrierWave::Storage::Fog):
+  
+app/uploaders/drawing_image_uploader.rb:10:in `<class:DrawingImageUploader>'
+app/uploaders/drawing_image_uploader.rb:3:in `<top (required)>'
+app/models/drawing.rb:6:in `<class:Drawing>'
+app/models/drawing.rb:1:in `<top (required)>'
+app/controllers/drawings_controller.rb:4:in `index'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (18.6ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (148.5ms)
+Started GET "/drawings" for ::1 at 2016-08-07 15:23:05 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (3.5ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 1171ms (Views: 1091.3ms | ActiveRecord: 25.9ms)
+
+
+Started GET "/drawings/new" for ::1 at 2016-08-07 15:23:15 -0400
+Processing by DrawingsController#new as HTML
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/_form.html.erb (142.8ms)
+  Rendered drawings/new.html.erb within layouts/application (147.4ms)
+Completed 200 OK in 216ms (Views: 209.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/drawings" for ::1 at 2016-08-07 15:23:29 -0400
+Processing by DrawingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+DPyS3lhoCmKEMbVna93d5Zqd69GY0hcyXoxedqXBOBpa7owTJRuPgvRq/qIyrIB145CC/DPULyk08cnlb+kwg==", "drawing"=>{"drawing_image"=>#<ActionDispatch::Http::UploadedFile:0x007fc647f3ed40 @tempfile=#<Tempfile:/var/folders/q7/vmdd5v9j2jzb77slkc65ql180000gn/T/RackMultipart20160807-55895-15up78l.jpg>, @original_filename="megan-coyle.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"drawing[drawing_image]\"; filename=\"megan-coyle.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"Drawing Time", "description"=>"", "location"=>""}, "commit"=>"Create Drawing"}
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.5ms)[0m  [1m[32mINSERT INTO "drawings" ("title", "description", "location", "created_at", "updated_at", "drawing_image") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Drawing Time"], ["description", ""], ["location", ""], ["created_at", 2016-08-07 19:23:29 UTC], ["updated_at", 2016-08-07 19:23:29 UTC], ["drawing_image", "megan-coyle.jpg"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/16
+Completed 302 Found in 824ms (ActiveRecord: 31.6ms)
+
+
+Started GET "/drawings/16" for ::1 at 2016-08-07 15:23:29 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mDrawing Load (2.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (2.1ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 16]]
+  [1m[36mComment Load (2.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 16]]
+  Rendered comments/_form.html.erb (42.9ms)
+  Rendered drawings/show.html.erb within layouts/application (176.8ms)
+Completed 200 OK in 251ms (Views: 198.7ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-07 15:23:48 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.9ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 118ms (Views: 100.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/drawings/16" for ::1 at 2016-08-07 15:24:25 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mDrawing Load (10.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (3.8ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 16]]
+  [1m[36mComment Load (3.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."drawing_id" = $1[0m  [["drawing_id", 16]]
+  Rendered comments/_form.html.erb (34.8ms)
+  Rendered drawings/show.html.erb within layouts/application (106.3ms)
+Completed 200 OK in 338ms (Views: 252.9ms | ActiveRecord: 17.9ms)
+
+
