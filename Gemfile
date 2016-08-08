@@ -30,6 +30,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
+gem 'httparty'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
