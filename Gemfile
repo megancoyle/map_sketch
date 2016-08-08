@@ -31,6 +31,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
 gem 'httparty'
+gem 'pry'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

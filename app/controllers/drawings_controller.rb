@@ -16,8 +16,16 @@ class DrawingsController < ApplicationController
     @drawing = Drawing.find(params[:id])
   end
 
+  def get_address
+    if params[:address]
+      @address_url = get_map_url(params[:address])
+      puts get_map_url(params[:address]).inspect
+    end
+  end
+
   def create
-    puts params.inspect
+    puts params[:address].inspect
+    @address = params[:address]
     @drawing = Drawing.new(drawing_params)
     @drawing.drawing_image = params[:drawing_image]
 

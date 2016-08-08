@@ -1,6 +1,6 @@
 <h1>What Will You Create Today?</h1>
 <div class="space-layout">
-  <%= link_to 'Make a New Drawing', new_drawing_path, :class => 'fa fa-plus-circle' %>
+  <%= link_to 'Make a New Drawing', drawings_get_address_path, :class => 'fa fa-plus-circle' %>
 
   <% @drawings.sort { |a,b| a.title <=> b.title }.each do |drawing| %>
     <p><%= link_to drawing.title, drawing_path(drawing) %> <%= link_to 'Edit', edit_drawing_path(drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(drawing), method: :delete, :class => 'fa fa-trash-o' %></p>
