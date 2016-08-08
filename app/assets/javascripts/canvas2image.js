@@ -82,7 +82,6 @@ var Canvas2Image = function () {
 
 	/**
 	 * create bitmap image
-	 * ���չ�������ͼƬ��Ӧͷ����Ӧ��
 	 */
 	var genBitmapImage = function (data) {
 		var imgHeader = [],
@@ -119,7 +118,7 @@ var Canvas2Image = function () {
 		imgInfoHeader.push(0);
 		imgInfoHeader.push(0);
 
-		// ����info
+		// info
 		var _width = width;
 		imgInfoHeader.push(_width % 256);
 		_width = Math.floor(_width / 256);
@@ -129,7 +128,7 @@ var Canvas2Image = function () {
 		_width = Math.floor(_width / 256);
 		imgInfoHeader.push(_width % 256);
 
-		// ����info
+		// info
 		var _height = height;
 		imgInfoHeader.push(_height % 256);
 		_height = Math.floor(_height / 256);
