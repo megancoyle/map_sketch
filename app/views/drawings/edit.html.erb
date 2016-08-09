@@ -1,6 +1,45 @@
 <h1>Edit Drawing</h1>
 <div class="form-block">
-<%= render 'form' %>
+
+  <%= javascript_tag do %>
+    window.mapImgUrl = '<%= raw @address_url %>';
+  <% end %>
+
+  <%= form_for @drawing do |f| %>
+
+  <% if @drawing.errors.any? %>
+      <div id="error_explanation">
+        <ul>
+          <% @drawing.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      <%= f.file_field :drawing_image %>
+    </p>
+
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </p>
+
+    <p>
+      <%= f.label :location %><br>
+      <%= f.text_field :location %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+
 
 <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %>
 </div>
