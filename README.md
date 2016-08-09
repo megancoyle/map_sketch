@@ -13,7 +13,6 @@ MapSketch is a web app built on Ruby on Rails. The drawing functionality is made
 * As a user, I can delete drawings I no longer want to see in my account.
 
 ## Technologies Used
-* Canvas2Image.js: for saving the JS drawing to an image
 * [jscolor](http://jscolor.com/): for the colorpicker
 
 ![Screenshot](screenshot.jpg)
