@@ -18003,3 +18003,215 @@ Processing by DrawingsController#index as HTML
 Completed 200 OK in 89ms (Views: 83.7ms | ActiveRecord: 2.7ms)
 
 
+Started GET "/drawings" for ::1 at 2016-08-09 17:22:02 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 198ms (Views: 181.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:22:07 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 76ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-09 17:22:10 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 153ms (Views: 147.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:22:13 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 72ms (Views: 68.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:22:16 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 86ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-09 17:22:25 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:22:27 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.7ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 76ms (Views: 67.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:29:08 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 166ms (Views: 152.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:29:11 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 116ms (Views: 106.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/drawings/26" for ::1 at 2016-08-09 17:29:20 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mDrawing Load (2.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (2.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 26]]
+  Rendered drawings/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 87ms (Views: 77.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:29:23 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (9.4ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 83ms (Views: 65.8ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:29:24 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 75ms (Views: 71.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-09 17:29:27 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 131ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:29:29 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (3.3ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 92ms (Views: 81.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:30:39 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 178ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=&commit=Start+Drawing%21" for ::1 at 2016-08-09 17:30:41 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 111ms (Views: 105.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-09 17:30:45 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 148ms (Views: 142.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:30:47 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (3.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 64ms (Views: 55.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:30:51 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 59ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-09 17:30:54 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-09 17:30:57 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:30:59 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (0.9ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:31:13 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=&commit=Start+Drawing%21" for ::1 at 2016-08-09 17:31:15 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 17:31:52 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (1.8ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (35.5ms)
+Completed 200 OK in 173ms (Views: 155.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 17:31:54 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 163ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-09 17:31:58 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 66ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-09 17:32:31 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 147ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
