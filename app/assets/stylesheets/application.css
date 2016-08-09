@@ -150,7 +150,7 @@ body.welcome {
 .form-block input, .form-block textarea, .form-block select {
     width: 100%;
     border: 1px solid #ff8080;
-    padding: 10px;
+    padding: 0 10px;
     margin-top: 10px;
     font-size: 14px;
     -webkit-box-sizing: border-box;
