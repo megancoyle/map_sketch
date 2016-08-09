@@ -5,7 +5,7 @@ $(".drawings.new").ready(function() {
 
     var img = new Image;
     img.onload = function(){
-     ctx.drawImage(img,0,0); // Or at whatever offset you like
+     ctx.drawImage(img,0,0);
     };
     img.src = window.mapImgUrl;
 
@@ -37,6 +37,19 @@ $(".drawings.new").ready(function() {
 
     document.getElementById('color_value').addEventListener('change',function(){
             strokeColor = '#' + this.value;
-            console.log(this.value);
             });
+
+    var dataImage = btoa(img);
+    var imageFromData = atob(dataImage);
+
+    console.log(dataImage)
+    console.log(imageFromData)
+
+    // document.getElementById('create-drawing').addEventListener('mouseover', function(){
+    //
+    // });
+    // document.getElementById('create-drawing').addEventListener('mouseover', function(){
+    //         var dataUrl = canvas.toDataURL();
+    //         console.log(dataUrl);
+    // });
 });
