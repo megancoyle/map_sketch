@@ -1,3 +1,7 @@
+<%= javascript_tag do %>
+  window.mapImgUrl = '<%= raw @address_url %>';
+<% end %>
+
 <%= form_for @drawing do |f| %>
 
 <% if @drawing.errors.any? %>
@@ -25,7 +29,7 @@
   </p>
 
   <div class="drawing">
-      <canvas width="600" height="320" id="cvs" style="background:url('<%= @address_url %>') no-repeat; background-size:cover;"></canvas>
+      <canvas width="600" height="320" id="cvs"></canvas>
 
       <div>
           <p>

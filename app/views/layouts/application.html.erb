@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>MapSketch</title>
-    <%# encoding: utf-8 %>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -23,7 +22,7 @@
         </nav>
     </div>
   </header>
-  <body class="<%= controller.controller_name %>">
+  <body class="<%= controller_name %> <%= action_name %>">
     <div class="container">
       <div class="content">
       <% flash.each do |type, message| %>
