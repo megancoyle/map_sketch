@@ -18,9 +18,7 @@ MapSketch is a web app built on Ruby on Rails. The drawing functionality is made
 
 
 ## Planning
-<p align="center">
 ![ERD](erd.jpg)
-</p>
 
 ### User Stories
 * As a user, I can draw on a map digitally.
