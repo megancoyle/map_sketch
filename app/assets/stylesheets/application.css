@@ -160,6 +160,9 @@ body.welcome {
 .map-grid a {
   color: black;
 }
+.map-grid a:hover {
+  opacity: .8;
+}
 
 .all-maps {
   text-align: center;

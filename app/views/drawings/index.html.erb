@@ -6,7 +6,7 @@
     <% @drawings.sort { |a,b| a.title <=> b.title }.each do |drawing| %>
       <div class="map-grid">
         <%= link_to (image_tag drawing.drawing_image), drawing_path(drawing) %>
-        <h3><%= link_to drawing.title, drawing_path(drawing) %> <%= link_to '', edit_drawing_path(drawing), :class => 'fa fa-pencil-square-o' %></h3>
+        <h3><%= link_to drawing.title, drawing_path(drawing) %></h3>
       </div>
     <% end %>
   </div>
