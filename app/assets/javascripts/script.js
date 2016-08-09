@@ -1,3 +1,5 @@
+
+
 var canvas, ctx, bMouseIsDown = false, iLastX, iLastY,
         $save, $imgs,
         $convert, $imgW, $imgH,

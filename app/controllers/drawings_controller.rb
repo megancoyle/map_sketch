@@ -10,6 +10,7 @@ class DrawingsController < ApplicationController
 
   def new
     @drawing = Drawing.new
+    @address_url = @drawing.get_map_url(params[:address])
   end
 
   def edit
