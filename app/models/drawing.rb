@@ -1,5 +1,7 @@
 class Drawing < ApplicationRecord
   has_many :notes, dependent: :destroy
+  has_many :favorites
+  has_many :users, through: :favorites
   validates :title, presence: true,
                     length: { minimum: 5 }
   mount_uploader :drawing_image, DrawingImageUploader

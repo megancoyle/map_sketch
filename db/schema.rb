@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809200126) do
+ActiveRecord::Schema.define(version: 20160809215729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 20160809200126) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "drawing_image"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "drawing_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["drawing_id"], name: "index_favorites_on_drawing_id", using: :btree
+    t.index ["user_id"], name: "index_favorites_on_user_id", using: :btree
   end
 
   create_table "notes", force: :cascade do |t|
@@ -50,5 +59,7 @@ ActiveRecord::Schema.define(version: 20160809200126) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "favorites", "drawings"
+  add_foreign_key "favorites", "users"
   add_foreign_key "notes", "drawings"
 end

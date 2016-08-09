@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get 'drawings/get_address' => 'drawings#get_address'
   resources :drawings do
     resources :notes
+    member do
+      post 'add_favorite'
+      delete 'remove_favorite'
+    end
   end
   root 'welcome#index'
 end

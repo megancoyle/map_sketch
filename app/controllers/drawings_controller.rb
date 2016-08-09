@@ -57,6 +57,20 @@ class DrawingsController < ApplicationController
     redirect_to drawings_path, alert: "Aw, snap. You deleted a drawing."
   end
 
+# add favorite
+def add_favorite
+  @drawing = Drawing.find(params[:id])
+  @drawing.favorites.create(user: current_user)
+  redirect_to drawing_path(@drawing)
+end
+
+# remove favorite
+def remove_favorite
+  @drawing = Drawing.find(params[:id])
+  @drawing.favorites.where(user: current_user).destroy_all
+  redirect_to drawing_path(@drawing)
+end
+
   private
     def drawing_params
       params.require(:drawing).permit(:title, :description, :location, :drawing_image)

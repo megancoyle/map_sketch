@@ -264,3 +264,20 @@ a.get-started:hover {
 #error_explanation {
   color: red;
 }
+
+/* Favoriting */
+a.fav {
+  text-decoration: none;
+  color: red;
+  padding-left: 10px;
+}
+
+a.no-fav {
+  text-decoration: none;
+  color: grey;
+  padding-left: 10px;
+}
+
+.fav:visited, .no-fav:visited {
+  text-decoration: none;
+}

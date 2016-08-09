@@ -17,6 +17,12 @@
     <% if @drawing.location.present? %>
       <li class="fa fa-map-marker"><strong>Location:</strong> <%= @drawing.location %></li>
       <% end %>
+        <% if Favorite.find_by(user: current_user, drawing: @drawing) %>
+          <%= link_to "&hearts;".html_safe, remove_favorite_drawing_path(@drawing), method: :delete, class: "fav" %>
+        <% else %>
+          <%= link_to "&hearts;".html_safe, add_favorite_drawing_path(@drawing), method: :post, class: "no-fav" %>
+
+      <% end %>
   </div>
 
   <% if @drawing.description.present? %>

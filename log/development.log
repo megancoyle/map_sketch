@@ -18215,3 +18215,479 @@ Processing by DrawingsController#new as HTML
 Completed 200 OK in 147ms (Views: 84.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3225134634285681705);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (7.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFavorites (20160809215729)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3225134634285681705)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3225134634285681705);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFavorites (20160809215729)
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (126.0ms)[0m  [1m[35mCREATE TABLE "favorites" ("id" serial primary key, "user_id" integer, "drawing_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_d15744e438"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_ab2db1767d"
+FOREIGN KEY ("drawing_id")
+  REFERENCES "drawings" ("id")
+)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_user_id" ON "favorites"  ("user_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_favorites_on_drawing_id" ON "favorites"  ("drawing_id")[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160809215729"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3225134634285681705)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'drawings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'favorites'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'notes'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+Started GET "/" for ::1 at 2016-08-09 18:30:18 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 1254ms (Views: 1223.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 18:30:22 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.4ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (303.8ms)
+Completed 500 Internal Server Error in 353ms (ActiveRecord: 14.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `drawing' for #<#<Class:0x007ffdc890f290>:0x007ffdc890e070>
+Did you mean?  drawing_url
+               @drawings):
+    12:   </div>
+    13: </div>
+    14: 
+    15: <% if Favorite.find_by(user: current_user, drawing: drawing) %>
+    16:     <%= link_to "&hearts;".html_safe, remove_favorite_drawing_path(drawing), method: :delete, class: "fav" %>
+    17:   <% else %>
+    18:     <%= link_to "&hearts;".html_safe, add_favorite_drawing_path(drawing), method: :post, class: "no-fav" %>
+  
+app/views/drawings/index.html.erb:15:in `_app_views_drawings_index_html_erb__128945859565202640_70363984199060'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.0ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (141.3ms)
+Started GET "/drawings" for ::1 at 2016-08-09 18:32:11 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (4.1ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 143ms (Views: 124.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-09 18:32:14 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 64ms (Views: 56.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 18:32:16 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (2.0ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 71ms (Views: 64.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:32:17 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (2.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (7.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (400.5ms)
+Completed 500 Internal Server Error in 506ms (ActiveRecord: 27.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `drawing' for #<#<Class:0x007ffdc890f290>:0x007ffdc1f4f918>
+Did you mean?  @drawing):
+    36:     <% end %>
+    37: <% end %>
+    38: 
+    39: <% if Favorite.find_by(user: current_user, drawing: drawing) %>
+    40:     <%= link_to "&hearts;".html_safe, remove_favorite_drawing_path(drawing), method: :delete, class: "fav" %>
+    41:   <% else %>
+    42:     <%= link_to "&hearts;".html_safe, add_favorite_drawing_path(drawing), method: :post, class: "no-fav" %>
+  
+app/views/drawings/show.html.erb:39:in `_app_views_drawings_show_html_erb___2705088463526638395_70363966932980'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (117.0ms)
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:33:43 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (3.1ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (3.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (411.7ms)
+Completed 500 Internal Server Error in 455ms (ActiveRecord: 6.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `drawing' for #<#<Class:0x007ffdc890f290>:0x007ffdc8b26100>
+Did you mean?  @drawing):
+    36:     <% end %>
+    37: <% end %>
+    38: 
+    39: <% if Favorite.find_by(user: current_user, drawing: drawing) %>
+    40:     <%= link_to "&hearts;".html_safe, remove_favorite_drawing_path(@drawing), method: :delete, class: "fav" %>
+    41:   <% else %>
+    42:     <%= link_to "&hearts;".html_safe, add_favorite_drawing_path(@drawing), method: :post, class: "no-fav" %>
+  
+app/views/drawings/show.html.erb:39:in `_app_views_drawings_show_html_erb___2705088463526638395_70363985294700'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (12.7ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (109.5ms)
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:43:43 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (3.2ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (2.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  [1m[36mFavorite Load (3.5ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered drawings/show.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 305ms (Views: 196.7ms | ActiveRecord: 23.8ms)
+
+
+Started POST "/drawings/25/add_favorite" for ::1 at 2016-08-09 18:43:50 -0400
+Processing by DrawingsController#add_favorite as HTML
+  Parameters: {"authenticity_token"=>"FTU15D66TkErTvrAcwEgSL6oo+Iq1TQb+Tnxp9DXUUyEbX2fC0+AVqqPl+9mZOU+/0yWRpx5LPuUkAf5n//xbg==", "id"=>"25"}
+  [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.9ms)[0m  [1m[32mINSERT INTO "favorites" ("drawing_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["drawing_id", 25], ["created_at", 2016-08-09 22:43:50 UTC], ["updated_at", 2016-08-09 22:43:50 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 48ms (ActiveRecord: 23.2ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:43:50 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  [1m[36mFavorite Load (1.4ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered drawings/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 57ms (Views: 50.9ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/drawings/25/remove_favorite" for ::1 at 2016-08-09 18:43:58 -0400
+Processing by DrawingsController#remove_favorite as HTML
+  Parameters: {"authenticity_token"=>"l3EUzi6wIr1czprL+VA30QMbyS6yYfvi1dPsaspQUZsGKVy1G0Xsqt0P9+TsNfKnQv/8igTN4wK4eho0hXjxuQ==", "id"=>"25"}
+  [1m[36mDrawing Load (1.1ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.0ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."drawing_id" = $1 AND "favorites"."user_id" IS NULL[0m  [["drawing_id", 25]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 36ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:43:58 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  [1m[36mFavorite Load (1.7ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered drawings/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 93ms (Views: 85.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:45:17 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (3.3ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (2.2ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 289ms (Views: 251.5ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:45:47 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.6ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.7ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 125ms (Views: 97.8ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/drawings/25/add_favorite" for ::1 at 2016-08-09 18:45:51 -0400
+Processing by DrawingsController#add_favorite as HTML
+  Parameters: {"authenticity_token"=>"oWzN9dtBThKd77Nj7VK5Koip376QhQ0CT8dBiF/1BygwNIWO7rSABRwu3kz4N3xcyU3qGiYpFeIibrfWEN2nCg==", "id"=>"25"}
+  [1m[36mDrawing Load (0.4ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[32mINSERT INTO "favorites" ("drawing_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["drawing_id", 25], ["created_at", 2016-08-09 22:45:51 UTC], ["updated_at", 2016-08-09 22:45:51 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 18ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:45:51 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (1.2ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 110ms (Views: 103.7ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/drawings/25/remove_favorite" for ::1 at 2016-08-09 18:45:53 -0400
+Processing by DrawingsController#remove_favorite as HTML
+  Parameters: {"authenticity_token"=>"blZHT1TL236/u/+IKtodKA7rqrCTzPo9l8QZicCfH6j/Dg80YT4VaT56kqc/v9heTw+fFCVg4t36be/Xj7e/ig==", "id"=>"25"}
+  [1m[36mDrawing Load (5.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mFavorite Load (1.1ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."drawing_id" = $1 AND "favorites"."user_id" IS NULL[0m  [["drawing_id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 27ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:45:53 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.4ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 83ms (Views: 74.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:47:07 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  Rendered drawings/show.html.erb within layouts/application (26.6ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/Users/mcoyle/wdi/projects/map_sketch/app/views/drawings/show.html.erb:44: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/mcoyle/wdi/projects/map_sketch/app/views/drawings/show.html.erb:46: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/drawings/show.html.erb:44: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/drawings/show.html.erb:46: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.5ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.8ms)
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:47:41 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (1.3ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (3.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (39.3ms)
+Completed 200 OK in 179ms (Views: 148.5ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:48:07 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.5ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 186ms (Views: 168.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/drawings/25/add_favorite" for ::1 at 2016-08-09 18:48:11 -0400
+Processing by DrawingsController#add_favorite as HTML
+  Parameters: {"authenticity_token"=>"gvbAaAYDF/dqQ+7qJYUvEHx+9azm1uWOF/Oa4DC+4HcTrogTM/bZ4OuCg8Uw4OpmPZrACFB6/W56Wmy+f5ZAVQ==", "id"=>"25"}
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.1ms)[0m  [1m[32mINSERT INTO "favorites" ("drawing_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["drawing_id", 25], ["created_at", 2016-08-09 22:48:11 UTC], ["updated_at", 2016-08-09 22:48:11 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 16ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:48:11 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (2.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (2.0ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 56ms (Views: 47.6ms | ActiveRecord: 5.4ms)
+
+
+Started DELETE "/drawings/25/remove_favorite" for ::1 at 2016-08-09 18:48:12 -0400
+Processing by DrawingsController#remove_favorite as HTML
+  Parameters: {"authenticity_token"=>"I3xA5WYcvU6zv7GcBC5Q6+AOcb+ezPaA/fKArPURWZWyJAieU+lzWTJ+3LMRS5WdoepEGyhg7mCQW3byujn5tw==", "id"=>"25"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."drawing_id" = $1 AND "favorites"."user_id" IS NULL[0m  [["drawing_id", 25]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:48:12 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (3.7ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (4.3ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 71ms (Views: 59.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:49:30 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (1.0ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (0.8ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (2.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 183ms (Views: 160.1ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/drawings/25/add_favorite" for ::1 at 2016-08-09 18:49:35 -0400
+Processing by DrawingsController#add_favorite as HTML
+  Parameters: {"authenticity_token"=>"89ok78zNioSammvQ8s5tXBlaBRe/TyaUmvOWPZLTcNJigmyU+ThEkxtbBv/nq6gqWL4wswnjPnT3WmBj3fvQ8A==", "id"=>"25"}
+  [1m[36mDrawing Load (0.8ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO "favorites" ("drawing_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["drawing_id", 25], ["created_at", 2016-08-09 22:49:35 UTC], ["updated_at", 2016-08-09 22:49:35 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 17ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:49:35 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.9ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (3.0ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.7ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 66ms (Views: 58.2ms | ActiveRecord: 4.5ms)
+
+
+Started DELETE "/drawings/25/remove_favorite" for ::1 at 2016-08-09 18:49:37 -0400
+Processing by DrawingsController#remove_favorite as HTML
+  Parameters: {"authenticity_token"=>"r0BLzrfxeXkTXsnn1V+WFdsSm1Fo6WfvfxveOUYAbT4+GAO1ggS3bpKfpMjAOlNjmvau9d5Ffw8SsihnCSjNHA==", "id"=>"25"}
+  [1m[36mDrawing Load (2.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mFavorite Load (0.9ms)[0m  [1m[34mSELECT "favorites".* FROM "favorites" WHERE "favorites"."drawing_id" = $1 AND "favorites"."user_id" IS NULL[0m  [["drawing_id", 25]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "favorites" WHERE "favorites"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/drawings/25
+Completed 302 Found in 11ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/drawings/25" for ::1 at 2016-08-09 18:49:37 -0400
+Processing by DrawingsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mDrawing Load (0.7ms)[0m  [1m[34mSELECT  "drawings".* FROM "drawings" WHERE "drawings"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering drawings/show.html.erb within layouts/application
+  [1m[36mFavorite Load (1.1ms)[0m  [1m[34mSELECT  "favorites".* FROM "favorites" WHERE "favorites"."user_id" IS NULL AND "favorites"."drawing_id" = 25 LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mNote Load (0.6ms)[0m  [1m[34mSELECT "notes".* FROM "notes" WHERE "notes"."drawing_id" = $1[0m  [["drawing_id", 25]]
+  Rendered drawings/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-08-09 18:49:43 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings" for ::1 at 2016-08-09 18:49:45 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (0.5ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 73ms (Views: 67.2ms | ActiveRecord: 0.5ms)
+
+
