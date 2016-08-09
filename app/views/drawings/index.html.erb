@@ -1,8 +1,13 @@
 <h1>What Will You Create Today?</h1>
 <div class="space-layout">
-  <%= link_to 'Make a New Drawing', drawings_get_address_path, :class => 'fa fa-plus-circle' %>
+  <%= link_to 'Make a New Drawing', drawings_get_address_path, :class => 'get-started' %>
 
-  <% @drawings.sort { |a,b| a.title <=> b.title }.each do |drawing| %>
-    <p><%= link_to drawing.title, drawing_path(drawing) %> <%= link_to 'Edit', edit_drawing_path(drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(drawing), method: :delete, :class => 'fa fa-trash-o' %></p>
-  <% end %>
+  <div class="all-maps">
+    <% @drawings.sort { |a,b| a.title <=> b.title }.each do |drawing| %>
+      <div class="map-grid">
+        <%= link_to (image_tag drawing.drawing_image), drawing_path(drawing) %>
+        <h3><%= link_to drawing.title, drawing_path(drawing) %> <%= link_to '', edit_drawing_path(drawing), :class => 'fa fa-pencil-square-o' %></h3>
+      </div>
+    <% end %>
+  </div>
 </div>

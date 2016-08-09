@@ -8,21 +8,25 @@
 </div>
 
 <div class="space-layout">
-  <p>
-    <strong>Description:</strong>
-    <%= @drawing.description %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= @drawing.location %>
-  </p>
 
   <div class="drawing">
     <img src="<%= @drawing.drawing_image %>">
   </div>
 
-<% if @drawing.notes.present? %>
+  <div class="location-details">
+    <% if @drawing.location.present? %>
+      <li class="fa fa-map-marker"><strong>Location:</strong> <%= @drawing.location %></li>
+      <% end %>
+  </div>
+
+  <% if @drawing.description.present? %>
+    <div class="description">
+      <h2>Description</h2>
+      <p><%= @drawing.description %></p>
+    </div>
+    <% end %>
+
+  <% if @drawing.notes.present? %>
     <h2>Notes</h2>
     <% @drawing.notes.each do |note| %>
       <div class="note">
@@ -31,11 +35,3 @@
       </div>
     <% end %>
 <% end %>
-
-  <% if @drawing.comments.present? %>
-    <h2>Comments</h2>
-    <%= render @drawing.comments %>
-  <% end %>
-
-  <h2>Add a comment:</h2>
-  <%= render 'comments/form' %>

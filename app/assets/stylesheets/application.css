@@ -124,21 +124,86 @@ body.welcome {
   margin: auto;
 }
 
-/* Comments and Notes */
-.comment, .note {
+.location-details {
+  margin-top: -10px;
+  color: gray;
+}
+
+.description {
+  margin-top: 10px;
+  padding-top:20px;
+  border-bottom: 1px solid #ff8080;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+/* Map Grid */
+.map-grid img {
+  width: 100%;
+  max-width: 250px;
+}
+
+.map-grid {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+
+.map-grid p {
+    margin-top: -10px;
+}
+
+.map-grid h3 {
+    font-size: 20px;
+    margin-top: -10px;
+}
+.map-grid a {
+  color: black;
+}
+
+.all-maps {
+  text-align: center;
+  padding-top: 50px;
+}
+
+/* Notes */
+.note {
   max-width: 600px;
   margin: auto;
   border-bottom: 1px solid #b3b3b3;
 }
-.comment a {
-  text-align: right;
+
+/* Get Started Button */
+a.get-started {
+  border: 1px solid #ff4d4d;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-left: 0.5em;
+  outline: medium none;
+  padding: 0.5em 0.6em;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.01);
+  transition: all 0.2s ease 0s;
+  vertical-align: middle;
+  color: #ff4d4d;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+a.get-started:hover {
+  background: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  color: white;
 }
 
 /* Form Styling */
 .form-block {
-    max-width: 500px;
-    padding: 20px;
-    margin: 0 auto;
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
 }
 .form-block input, .form-block select {
   height: 30px;
@@ -157,17 +222,26 @@ body.welcome {
    -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
+
 .form-block input[type="submit"] {
-    padding: 0 10px 0 10px;
-    width: auto;
-    min-width: 250px;
-    cursor: pointer;
-    color: white;
-    background: #ff8080;
+  border: 1px solid white;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.01);
+  transition: all 0.2s ease 0s;
+  background: #ff8080;
+  color: white;
+  padding: 0 10px 0 10px;
+  width: auto;
+  min-width: 250px;
+  cursor: pointer;
 }
 .form-block input[type="submit"]:hover {
   background: #ff4d4d;
+  border: 1px solid #ff4d4d;;
+  color: white;
 }
+
 .form-block input[type='checkbox'] {
   width: auto;
 }
