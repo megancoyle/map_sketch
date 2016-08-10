@@ -20662,3 +20662,19 @@ Processing by DrawingsController#new as HTML
 Completed 200 OK in 196ms (Views: 178.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:25:37 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 681ms (Views: 368.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:26:22 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (167.4ms)
+Completed 200 OK in 706ms (Views: 644.4ms | ActiveRecord: 0.0ms)
+
+

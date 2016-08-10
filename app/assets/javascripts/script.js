@@ -27,6 +27,7 @@ $(".drawings.new").ready(function() {
             ctx.moveTo(iLastX, iLastY);
             ctx.lineTo(iX, iY);
             ctx.stroke();
+            ctx.lineWidth=2;
             ctx.strokeStyle = strokeColor;
             iLastX = iX;
             iLastY = iY;
