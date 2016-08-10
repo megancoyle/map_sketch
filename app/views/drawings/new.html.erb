@@ -17,6 +17,18 @@
       </div>
     <% end %>
 
+    <div class="drawing">
+        <canvas width="600" height="320" id="cvs"></canvas>
+            <p>
+                <input name="color2" type="hidden" id="color_value" value="66ccff">
+                <button class="jscolor {valueElement: 'color_value'}">Pick a color</button>
+            </p>
+    </div>
+    <p>Are you done drawing? Right-click to save you new map sketch image, Then upload the image by using the file upload here:</p>
+    <p>
+    <%= f.file_field :drawing_image %>
+    </p>
+
     <p>
       <%= f.label :title %><br>
       <%= f.text_field :title %>
@@ -32,19 +44,10 @@
       <%= f.text_area :description %>
     </p>
 
-    <div class="drawing">
-        <canvas width="600" height="320" id="cvs"></canvas>
-            <p>
-                <input name="color2" type="hidden" id="color_value" value="66ccff">
-                <button class="jscolor {valueElement: 'color_value'}">Pick a color</button>
-            </p>
-    </div>
-    <p>
-    <%= f.file_field :drawing_image %>
-    </p>
     <p>
       <%= f.submit :id => 'create-drawing' %>
     </p>
+
   <% end %>
   <div id="new-image">
   </div>
