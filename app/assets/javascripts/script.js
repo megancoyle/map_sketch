@@ -23,6 +23,7 @@ $(".drawings.new").ready(function() {
         if (bMouseIsDown) {
             var iX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
             var iY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
+            ctx.beginPath();
             ctx.moveTo(iLastX, iLastY);
             ctx.lineTo(iX, iY);
             ctx.stroke();

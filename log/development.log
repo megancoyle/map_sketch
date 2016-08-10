@@ -20520,3 +20520,145 @@ Processing by DrawingsController#new as HTML
 Completed 200 OK in 169ms (Views: 150.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/drawings" for ::1 at 2016-08-10 11:03:39 -0400
+Processing by DrawingsController#index as HTML
+  Rendering drawings/index.html.erb within layouts/application
+  [1m[36mDrawing Load (8.9ms)[0m  [1m[34mSELECT "drawings".* FROM "drawings"[0m
+  Rendered drawings/index.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 198ms (Views: 171.8ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-10 11:03:40 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 93ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-10 11:05:46 -0400
+Processing by DrawingsController#get_address as HTML
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `get_map_url' for #<DrawingsController:0x007ffdc4f5ae00>):
+  
+app/controllers/drawings_controller.rb:22:in `get_address'
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.6ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendering /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/mcoyle/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (151.1ms)
+Started GET "/drawings/get_address" for ::1 at 2016-08-10 11:06:06 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 83ms (Views: 78.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/get_address" for ::1 at 2016-08-10 11:07:52 -0400
+Processing by DrawingsController#get_address as HTML
+  Rendering drawings/get_address.html.erb within layouts/application
+  Rendered drawings/get_address.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 101ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:07:58 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 251ms (Views: 61.5ms | ActiveRecord: 147.9ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:08:48 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 437ms (Views: 420.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:08:58 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (72.6ms)
+Completed 200 OK in 325ms (Views: 276.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:09:06 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:09:51 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 344ms (Views: 330.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:10:43 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (99.1ms)
+Completed 200 OK in 873ms (Views: 824.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:11:27 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 404ms (Views: 389.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:12:08 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (115.9ms)
+Completed 200 OK in 586ms (Views: 534.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:13:41 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 432ms (Views: 417.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:15:38 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 180ms (Views: 162.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:16:31 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 173ms (Views: 158.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/drawings/new?utf8=%E2%9C%93&address=Alexandria%2CVA&commit=Start+Drawing%21" for ::1 at 2016-08-10 11:17:15 -0400
+Processing by DrawingsController#new as HTML
+  Parameters: {"utf8"=>"✓", "address"=>"Alexandria,VA", "commit"=>"Start Drawing!"}
+  Rendering drawings/new.html.erb within layouts/application
+  Rendered drawings/new.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 196ms (Views: 178.2ms | ActiveRecord: 0.0ms)
+
+
