@@ -19841,3 +19841,10 @@ Processing by DrawingsController#new as HTML
 Completed 200 OK in 107ms (Views: 83.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-08-10 08:57:29 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 470ms (Views: 378.3ms | ActiveRecord: 0.0ms)
+
+
