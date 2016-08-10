@@ -1,8 +1,8 @@
 <h1>What Address Do You Want to Sketch?</h1>
 <div class="form-block">
-<%= form_tag '/drawings/new', method: :get do %>
-  <%= label_tag 'address', 'Address' %>
-  <%= text_field_tag 'address' %>
-  <%= submit_tag(value="Start Drawing!") %>
-<% end %>
+  <%= form_tag '/drawings/new', method: :get do %>
+    <%= label_tag 'address', 'Address' %>
+    <%= text_field_tag 'address' %>
+    <%= submit_tag(value="Start Drawing!") %>
+  <% end %>
 </div>
