@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  # before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def show
     @note = Note.find(params[:id])
