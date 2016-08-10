@@ -137,6 +137,12 @@ body.welcome {
   margin-bottom: 30px;
 }
 
+/* Note Page */
+.detail-page {
+  max-width: 600px;
+  margin: auto;
+}
+
 /* Map Grid */
 .map-grid img {
   width: 100%;
