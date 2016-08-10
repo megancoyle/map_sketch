@@ -21052,3 +21052,17 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 73ms (Views: 69.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2016-08-10 12:00:59 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 179ms (Views: 169.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-10 12:05:20 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 328ms (Views: 301.7ms | ActiveRecord: 0.0ms)
+
+
