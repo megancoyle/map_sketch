@@ -18,12 +18,13 @@
     <% end %>
 
     <p>
-      <%= f.file_field :drawing_image %>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
     </p>
 
     <p>
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
+      <%= f.label :location %><br>
+      <%= f.text_field :location, :value => params[:address] %>
     </p>
 
     <p>
@@ -33,27 +34,20 @@
 
     <div class="drawing">
         <canvas width="600" height="320" id="cvs"></canvas>
-
-        <div>
             <p>
                 <input name="color2" type="hidden" id="color_value" value="66ccff">
                 <button class="jscolor {valueElement: 'color_value'}">Pick a color</button>
             </p>
-
-        </div>
-        <div id="imgs">
-
-        </div>
     </div>
-
     <p>
-      <%= f.label :location %><br>
-      <%= f.text_field :location %>
+    <%= f.file_field :drawing_image %>
     </p>
     <p>
       <%= f.submit :id => 'create-drawing' %>
     </p>
   <% end %>
+  <div id="new-image">
+  </div>
 
 <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %>
 </div>

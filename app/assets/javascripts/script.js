@@ -39,15 +39,15 @@ $(".drawings.new").ready(function() {
             strokeColor = '#' + this.value;
             });
 
-    var dataImage = btoa(img);
-    var imageFromData = atob(dataImage);
-
-    console.log(dataImage)
-    console.log(imageFromData)
-
     // document.getElementById('create-drawing').addEventListener('mouseover', function(){
-    //
+    //   var dataImage = window.btoa(img);
+    //   console.log(dataImage);
+    //   var imageFromData = window.atob(dataImage);
+    //   console.log(imageFromData)
+    //   document.getElementById('new-image').innerHTML = '<img src=' + imageFromData + '>';
     // });
+
+
     // document.getElementById('create-drawing').addEventListener('mouseover', function(){
     //         var dataUrl = canvas.toDataURL();
     //         console.log(dataUrl);
