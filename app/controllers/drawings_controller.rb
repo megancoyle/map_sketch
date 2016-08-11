@@ -28,12 +28,8 @@ class DrawingsController < ApplicationController
     puts params[:address].inspect
     @address = params[:address]
     @drawing = Drawing.new(drawing_params)
-    @drawing.drawing_image = params[:drawing_image]
 
     if @drawing.save
-      @drawing.drawing_image.url # => '/url/to/file.png'
-      @drawing.drawing_image.current_path # => 'path/to/file.png'
-      @drawing.drawing_image_identifier # => 'file.png'
       redirect_to @drawing, notice: "Awesomeness. A new drawing was created."
     else
       render 'new'
@@ -73,7 +69,7 @@ class DrawingsController < ApplicationController
 
   private
     def drawing_params
-      params.require(:drawing).permit(:title, :description, :location, :drawing_image)
+      params.require(:drawing).permit(:title, :description, :location, :image)
     end
 
 end

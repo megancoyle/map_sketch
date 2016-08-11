@@ -4,6 +4,7 @@ $(".drawings.new").ready(function() {
       ctx = canvas.getContext('2d');
 
     var img = new Image;
+    img.setAttribute('crossOrigin', 'anonymous');
     img.onload = function(){
      ctx.drawImage(img,0,0);
     };
@@ -41,17 +42,13 @@ $(".drawings.new").ready(function() {
             strokeColor = '#' + this.value;
             });
 
-    // document.getElementById('create-drawing').addEventListener('mouseover', function(){
-    //   var dataImage = window.btoa(img);
-    //   console.log(dataImage);
-    //   var imageFromData = window.atob(dataImage);
-    //   console.log(imageFromData)
-    //   document.getElementById('new-image').innerHTML = '<img src=' + imageFromData + '>';
-    // });
+    document.getElementById('create-drawing').addEventListener('click', function(){
+            var dataUrl = canvas.toDataURL("image/jpeg");
+            var dataImg = document.createElement('img');
+            dataImg.src = dataUrl;
+            var drawingField = document.createElement('div');
+            drawingField.innerHTML = "<input type='hidden' name='drawing[image]' id='image' value='" + dataImg.src + "'>"
+            document.getElementById('drawing_image').value = dataUrl;
+          });
 
-
-    // document.getElementById('create-drawing').addEventListener('mouseover', function(){
-    //         var dataUrl = canvas.toDataURL();
-    //         console.log(dataUrl);
-    // });
 });

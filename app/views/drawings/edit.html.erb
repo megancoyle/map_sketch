@@ -1,10 +1,6 @@
 <h1>Edit Drawing</h1>
 <div class="form-block">
 
-  <%= javascript_tag do %>
-    window.mapImgUrl = '<%= raw @address_url %>';
-  <% end %>
-
   <%= form_for @drawing do |f| %>
 
   <% if @drawing.errors.any? %>
@@ -16,10 +12,6 @@
         </ul>
       </div>
     <% end %>
-
-    <p>
-      <%= f.file_field :drawing_image %>
-    </p>
 
     <p>
       <%= f.label :title %><br>

@@ -24,10 +24,8 @@
                 <button class="jscolor {valueElement: 'color_value'}">Pick a color</button>
             </p>
     </div>
-    <p>Are you done drawing? Right-click to save you new map sketch image, Then upload the image by using the file upload here:</p>
-    <p>
-    <%= f.file_field :drawing_image %>
-    </p>
+
+    <%= f.hidden_field :image %>
 
     <p>
       <%= f.label :title %><br>
