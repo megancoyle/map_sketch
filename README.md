@@ -12,14 +12,15 @@ MapSketch is a web app built on Ruby on Rails. The drawing functionality is made
 * [jscolor](http://jscolor.com/): for the color picker
 * [Devise](https://github.com/plataformatec/devise): for user authentication
 * HTML5 Canvas & JavaScript: for the functionality of drawing on a map
-* [CarrierWave](https://github.com/carrierwaveuploader/carrierwave): for uploading images
-* [AWS](https://aws.amazon.com/): hosting images on a server
+* Base64: encoding/decoding images as strings to store in a database
 * [Heroku](http://www.heroku.com/): hosting the deployed app
 
 ## Approach
 I knew that I wanted to make some sort of drawing app after previously working with HTML5 canvas for a Hangman app, but the question was, what kind of drawing app? I also knew that I wanted to work with an API and mapping. So why not merge that all together?
 
-I started off putting the skeleton in place for the CRUD functionality. Once I had that working, I tackled the drawing functionality with JavaScript. Although it would have been interesting to figure out how to code a color picker from scratch, I decided to use someone else's code for that feature. Next, I worked on styling so the app looked the way I wanted it to. Then I worked on refining different areas of the application.
+I started off putting the skeleton in place for the CRUD functionality. Once I had that working, I tackled the drawing functionality with JavaScript. Although it would have been interesting to figure out how to code a color picker from scratch, I decided to use someone else's code for that feature.
+
+For the images, I first used CarrierWave and AWS so users would have to right-click and save their map drawings and then upload them into the application. This seemed like a clunky solution, so I really wanted to figure out how to send the drawing to the database on form submit. The solution was encoding/decoding the canvas element with base64.
 
 ## Demo
 [![Video](video-screenshot.png)](https://www.youtube.com/watch?v=kQqRfvS-nCc)
@@ -40,7 +41,6 @@ The app requires a Google API key and AWS key if you wish to fork it and work on
 
 ## Unsolved Problems/Next Steps
 * Email authentication for users who sign up by using ActionMailer
-* Fine-tuning the user experience of adding map images to the site or possibly encoding/decoding images so they are stored in the database
 * Giving users the ability to erase lines
 * Giving users the ability to change the stroke width
 * Adding the 'get address' ability to the form so users can dynamically change the location for what map they draw on
