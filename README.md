@@ -22,7 +22,7 @@ I knew that I wanted to make some sort of drawing app after previously working w
 I started off putting the skeleton in place for the CRUD functionality. Once I had that working, I tackled the drawing functionality with JavaScript. Although it would have been interesting to figure out how to code a color picker from scratch, I decided to use someone else's code for that feature. Next, I worked on styling so the app looked the way I wanted it to. Then I worked on refining different areas of the application.
 
 ## Demo
-[![Video](video-screenshot.png)](https://www.youtube.com/watch?v=u_wI2sjHQZQ)
+[![Video](video-screenshot.png)](https://www.youtube.com/watch?v=kQqRfvS-nCc)
 
 ## Planning
 ![ERD](erd.jpg)
