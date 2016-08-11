@@ -1,6 +1,8 @@
 <h1>Edit Drawing</h1>
 <div class="form-block">
-
+  <div class="drawing">
+    <img src="<%= @drawing.image %>">
+  </div>
   <%= form_for @drawing do |f| %>
 
   <% if @drawing.errors.any? %>
