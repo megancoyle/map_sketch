@@ -3,9 +3,9 @@
 ## Overview
 MapSketch is a web app built on Ruby on Rails. The drawing functionality is made possible with JavaScript.
 
-[![Screenshot](screenshot.jpg)](https://nameless-castle-46609.herokuapp.com/)
+[![Screenshot](screenshot.jpg)](https://mapsketch.herokuapp.com/)
 
-[View the Deployed App](https://nameless-castle-46609.herokuapp.com/)
+[View the Deployed App](https://mapsketch.herokuapp.com/)
 
 ## Technologies Used
 * [Google Static Image Map API](https://developers.google.com/maps/documentation/static-maps/): for the HTML5 canvas background image
