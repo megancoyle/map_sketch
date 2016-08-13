@@ -32,7 +32,6 @@ For the images, I first used CarrierWave and AWS so users would have to right-cl
 * As a user, I can draw on a map digitally.
 * As a user, I can add new drawings.
 * As a user, I can update previous drawing information I've added.
-* As a user, I can delete drawings I no longer want to see in my account.
 
 [View more User Stories](planning/user_stories.md)
 
