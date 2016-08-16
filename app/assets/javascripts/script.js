@@ -29,13 +29,13 @@ $(".drawings.new").ready(function() {
             var iY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
             ctx.lineCap = "round";
             ctx.beginPath();
+            ctx.lineWidth= strokeWidth;
 
             if(mode=="pen") {
                 ctx.globalCompositeOperation="source-over";
                 ctx.moveTo(iLastX, iLastY);
                 ctx.lineTo(iX, iY);
                 ctx.stroke();
-                ctx.lineWidth= strokeWidth;
                 ctx.strokeStyle = strokeColor;
             } else {
               // logic for eraser
