@@ -25,15 +25,40 @@ $(".drawings.new").ready(function() {
             var iX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
             var iY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
             ctx.beginPath();
-            ctx.moveTo(iLastX, iLastY);
-            ctx.lineTo(iX, iY);
-            ctx.stroke();
-            ctx.lineWidth=2;
-            ctx.strokeStyle = strokeColor;
+
+            if(mode=="pen") {
+                ctx.globalCompositeOperation="source-over";
+                ctx.moveTo(iLastX, iLastY);
+                ctx.lineTo(iX, iY);
+                ctx.stroke();
+                ctx.lineWidth=2;
+                ctx.strokeStyle = strokeColor;
+            } else {
+              // logic for eraser
+                ctx.globalCompositeOperation="destination-out";
+                ctx.arc(iLastX, iLastY,5,0,Math.PI*2,false);
+                ctx.fill();
+            }
+
             iLastX = iX;
             iLastY = iY;
         }
     };
+
+    var mode="pen";
+    $(".jscolor").click(function(){ mode="pen"; });
+    // trying to get eraser not to remove background image
+    $("#eraser").click(function(e){
+      e.preventDefault();
+      canvas.style.backgroundImage = img.src;
+      mode="eraser";
+    });
+    $("#clear").click(function(e){
+      e.preventDefault();
+      ctx.canvas.width = ctx.canvas.width;
+      ctx.drawImage(img,0,0);
+      img.src = window.mapImgUrl;
+    });
 
     var strokeColor = '#' + document.getElementById('color_value').value;
     var colorPicker = document.getElementById('color_value');
