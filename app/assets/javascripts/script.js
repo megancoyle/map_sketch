@@ -10,6 +10,9 @@ $(".drawings.new").ready(function() {
     };
     img.src = window.mapImgUrl;
 
+    // initial stroke width
+    var strokeWidth = 2;
+
     canvas.onmousedown = function(e) {
         bMouseIsDown = true;
         iLastX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
@@ -24,6 +27,7 @@ $(".drawings.new").ready(function() {
         if (bMouseIsDown) {
             var iX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
             var iY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
+            ctx.lineCap = "round";
             ctx.beginPath();
 
             if(mode=="pen") {
@@ -31,7 +35,7 @@ $(".drawings.new").ready(function() {
                 ctx.moveTo(iLastX, iLastY);
                 ctx.lineTo(iX, iY);
                 ctx.stroke();
-                ctx.lineWidth=2;
+                ctx.lineWidth= strokeWidth;
                 ctx.strokeStyle = strokeColor;
             } else {
               // logic for eraser
@@ -58,6 +62,11 @@ $(".drawings.new").ready(function() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img,0,0);
       img.src = window.mapImgUrl;
+    });
+
+    var strokeControls = document.getElementById('stroke-width');
+    $("#stroke-width").on("input", function() {
+      strokeWidth = strokeControls.value;
     });
 
     var strokeColor = '#' + document.getElementById('color_value').value;
