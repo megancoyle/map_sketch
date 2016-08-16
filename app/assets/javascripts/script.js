@@ -55,7 +55,7 @@ $(".drawings.new").ready(function() {
     });
     $("#clear").click(function(e){
       e.preventDefault();
-      ctx.canvas.width = ctx.canvas.width;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.drawImage(img,0,0);
       img.src = window.mapImgUrl;
     });
