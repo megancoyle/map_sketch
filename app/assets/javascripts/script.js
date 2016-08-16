@@ -30,13 +30,13 @@ $(".drawings.new").ready(function() {
             ctx.lineCap = "round";
             ctx.beginPath();
             ctx.lineWidth= strokeWidth;
+            ctx.strokeStyle = strokeColor;
 
             if(mode=="pen") {
                 ctx.globalCompositeOperation="source-over";
                 ctx.moveTo(iLastX, iLastY);
                 ctx.lineTo(iX, iY);
                 ctx.stroke();
-                ctx.strokeStyle = strokeColor;
             } else {
               // logic for eraser
                 ctx.globalCompositeOperation="destination-out";
