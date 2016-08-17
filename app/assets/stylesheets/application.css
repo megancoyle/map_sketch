@@ -117,6 +117,7 @@ input#stroke-width {
     width: 80px;
     padding: 3px;
     margin: 0 10px;
+    border: none;
 }
 
 input#color {
