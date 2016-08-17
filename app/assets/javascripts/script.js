@@ -57,6 +57,9 @@ $(".drawings.new").ready(function() {
       canvas.style.backgroundImage = img.src;
       mode="eraser";
     });
+    $("#color").click(function(e){
+      e.preventDefault();
+    });
     $("#clear").click(function(e){
       e.preventDefault();
       ctx.clearRect(0, 0, canvas.width, canvas.height);

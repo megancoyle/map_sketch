@@ -19,13 +19,13 @@
 
     <div class="drawing">
         <canvas width="600" height="320" id="cvs"></canvas>
-            <p>
+            <div class="controls">
                 <input name="color2" type="hidden" id="color_value" value="66ccff">
-                <button class="jscolor {valueElement: 'color_value'}">Pick a color</button>
+                <input type="image" id="color" class="jscolor {valueElement: 'color_value'}" src="/images/color.png"/>
                 <!-- <button id="eraser">Eraser</button> -->
-                <button id="clear">Clear</button>
+                <input type="image" id="clear" src="/images/eraser.png"/>
                 <input type="range" name="stroke" id="stroke-width" min="1" max="10" value="2">
-            </p>
+            </div>
     </div>
 
     <%= f.hidden_field :image %>

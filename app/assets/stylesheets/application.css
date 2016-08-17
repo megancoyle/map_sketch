@@ -118,6 +118,22 @@ input#stroke-width {
     padding: 3px;
     margin: 0 10px;
 }
+
+input#color {
+    width: 60px;
+    height: 40px;
+    border: none;
+}
+
+input#clear {
+    height: 40px;
+    width: 60px;
+    border: none;
+}
+.controls {
+  margin-top: -10px;
+}
+
 .edit-icons {
   text-align: right;
 }

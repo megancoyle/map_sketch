@@ -40,8 +40,6 @@ The app requires a Google API key and AWS key if you wish to fork it and work on
 
 ## Unsolved Problems/Next Steps
 * Email authentication for users who sign up by using ActionMailer
-* Giving users the ability to erase lines
-* Giving users the ability to change the stroke width
 * Adding the 'get address' ability to the form so users can dynamically change the location for what map they draw on
 * Ability to increase/decrease the zoom of the map
 
