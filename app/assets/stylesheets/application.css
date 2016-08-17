@@ -114,7 +114,9 @@ body.welcome {
 
 /* Drawing Page */
 input#stroke-width {
-    width: 100px;
+    width: 80px;
+    padding: 3px;
+    margin: 0 10px;
 }
 .edit-icons {
   text-align: right;
