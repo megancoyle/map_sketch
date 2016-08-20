@@ -309,3 +309,13 @@ a.no-fav {
 .fav:visited, .no-fav:visited {
   text-decoration: none;
 }
+
+/* Styles for mobile devices */
+@media (max-width: 900px) {
+  img {
+    max-width: 100%;
+  }
+  canvas#cvs {
+    max-width: 100%;
+  }
+}
