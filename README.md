@@ -36,6 +36,7 @@ For the images, I first used CarrierWave and AWS so users would have to right-cl
 [View more User Stories](planning/user_stories.md)
 
 ## Installation
+// go into more detail here. include the application.yml file and what to change/add and include bundling/seeding
 The app requires a Google API key and AWS key if you wish to fork it and work on your own version.
 
 ## Unsolved Problems/Next Steps

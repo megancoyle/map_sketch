@@ -1,4 +1,5 @@
 /**
+ * was wondering why you had both this file as well as the minified version, or are they different files?
  * jscolor - JavaScript Color Picker
  *
  * @link    http://jscolor.com
@@ -855,7 +856,7 @@ var jsc = {
 					break;
 				}
 			};
-			
+
 			paletteObj.elm = vmlContainer;
 			paletteObj.draw = drawFunc;
 		}
@@ -926,7 +927,7 @@ var jsc = {
 				grad.color = color1;
 				grad.color2 = color2;
 			};
-			
+
 			sliderObj.elm = vmlContainer;
 			sliderObj.draw = drawFunc;
 		}
