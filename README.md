@@ -14,6 +14,7 @@ MapSketch is a web app built on Ruby on Rails. The drawing functionality is made
 * HTML5 Canvas & JavaScript: for the functionality of drawing on a map
 * Base64: encoding/decoding images as strings to store in a database
 * [Heroku](http://www.heroku.com/): hosting the deployed app
+* [Icons](https://icons8.com/): Icons used for the sketching app
 
 ## Approach
 I knew that I wanted to make some sort of drawing app after previously working with HTML5 canvas for a Hangman app, but the question was, what kind of drawing app? I also knew that I wanted to work with an API and mapping. So why not merge that all together?
