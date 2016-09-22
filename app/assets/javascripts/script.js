@@ -1,4 +1,5 @@
 $(".drawings.new").ready(function() {
+  // i was curious why you opted to do some of the code in jquery but some of the code in vanilla
   var canvas, ctx, bMouseIsDown = false, iLastX, iLastY
       canvas = document.getElementById('cvs');
       ctx = canvas.getContext('2d');
@@ -69,6 +70,7 @@ $(".drawings.new").ready(function() {
 
     var strokeControls = document.getElementById('stroke-width');
     $("#stroke-width").on("input", function() {
+      // cool! did not know what the `input` event was until now. I imagine this is what's changing the fatness of the ink
       strokeWidth = strokeControls.value;
     });
 

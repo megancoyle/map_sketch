@@ -1,4 +1,5 @@
 class DrawingsController < ApplicationController
+  # the flash messages are next level
   before_action :authenticate_user!, :except => [:index, :show]
   def index
     @drawings = Drawing.all
@@ -62,6 +63,7 @@ class DrawingsController < ApplicationController
 
   # remove favorite
   def remove_favorite
+    # this is small, but maybe use find_by here. Presumably there should only be one favorite by a single user.
     @drawing = Drawing.find(params[:id])
     @drawing.favorites.where(user: current_user).destroy_all
     redirect_to drawing_path(@drawing)
