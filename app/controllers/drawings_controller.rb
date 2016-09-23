@@ -28,6 +28,7 @@ class DrawingsController < ApplicationController
     puts params[:address].inspect
     @address = params[:address]
     @drawing = Drawing.new(drawing_params)
+    @drawing.user_id = @current_user.id if current_user
 
     if @drawing.save
       redirect_to @drawing, notice: "Awesomeness. A new drawing was created."
@@ -69,7 +70,7 @@ class DrawingsController < ApplicationController
 
   private
     def drawing_params
-      params.require(:drawing).permit(:title, :description, :location, :image)
+      params.require(:drawing).permit(:title, :description, :location, :image, :user)
     end
 
 end

@@ -3,7 +3,7 @@
   <div class="drawing">
     <img src="<%= @drawing.image %>">
   </div>
-  <%= form_for @drawing do |f| %>
+  <%= form_for [@user, @drawing] do |f| %>
 
   <% if @drawing.errors.any? %>
       <div id="error_explanation">

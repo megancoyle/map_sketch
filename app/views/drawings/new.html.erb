@@ -5,7 +5,7 @@
 <h1>New Drawing</h1>
 <div class="form-block">
 
-  <%= form_for @drawing do |f| %>
+  <%= form_for [@user, @drawing] do |f| %>
 
   <% if @drawing.errors.any? %>
       <div id="error_explanation">
