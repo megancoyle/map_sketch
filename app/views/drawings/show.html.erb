@@ -1,6 +1,6 @@
 <h1><%= @drawing.title %></h1>
 <div class="edit-icons">
-  <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <% if @drawing.user.id == current_user.id || current_user.admin? %><%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %><% end %> <%= link_to 'Add a Note', new_drawing_note_path(@drawing), :class => 'fa fa-comment' %>
+  <%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %> <% if user_signed_in? %><% if @drawing.user.id == current_user.id || current_user.admin? %><%= link_to 'Edit', edit_drawing_path(@drawing), :class => 'fa fa-pencil-square-o' %> <%= link_to 'Delete', drawing_path(@drawing), method: :delete, :class => 'fa fa-trash-o' %><% end %><% end %> <%= link_to 'Add a Note', new_drawing_note_path(@drawing), :class => 'fa fa-comment' %>
 </div>
 
 <div class="space-layout">
