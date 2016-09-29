@@ -50,17 +50,18 @@ $(".drawings.new").ready(function() {
     };
 
     // drawing for mobile devices
-    canvas.touchstart = function(e) {
+    canvas.addEventListener('touchstart', function(e){
         bMouseIsDown = true;
         iLastX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
         iLastY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
-    }
-    canvas.touchend = function() {
+    })
+
+    canvas.addEventListener('touchend', function(){
         bMouseIsDown = false;
         iLastX = -1;
         iLastY = -1;
-    }
-    canvas.touchmove = function(e) {
+    })
+    canvas.addEventListener('touchmove', function(e){
         if (bMouseIsDown) {
             var iX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
             var iY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
@@ -84,7 +85,7 @@ $(".drawings.new").ready(function() {
             iLastX = iX;
             iLastY = iY;
         }
-    };
+    });
 
     var mode="pen";
     $(".jscolor").click(function(){ mode="pen"; });
