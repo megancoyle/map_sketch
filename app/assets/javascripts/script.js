@@ -49,6 +49,43 @@ $(".drawings.new").ready(function() {
         }
     };
 
+    // drawing for mobile devices
+    canvas.touchstart = function(e) {
+        bMouseIsDown = true;
+        iLastX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
+        iLastY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
+    }
+    canvas.touchend = function() {
+        bMouseIsDown = false;
+        iLastX = -1;
+        iLastY = -1;
+    }
+    canvas.touchmove = function(e) {
+        if (bMouseIsDown) {
+            var iX = e.clientX - canvas.offsetLeft + (window.pageXOffset||document.body.scrollLeft||document.documentElement.scrollLeft);
+            var iY = e.clientY - canvas.offsetTop + (window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop);
+            ctx.lineCap = "round";
+            ctx.beginPath();
+            ctx.lineWidth= strokeWidth;
+            ctx.strokeStyle = strokeColor;
+
+            if(mode=="pen") {
+                ctx.globalCompositeOperation="source-over";
+                ctx.moveTo(iLastX, iLastY);
+                ctx.lineTo(iX, iY);
+                ctx.stroke();
+            } else {
+              // logic for eraser
+                ctx.globalCompositeOperation="destination-out";
+                ctx.arc(iLastX, iLastY,5,0,Math.PI*2,false);
+                ctx.fill();
+            }
+
+            iLastX = iX;
+            iLastY = iY;
+        }
+    };
+
     var mode="pen";
     $(".jscolor").click(function(){ mode="pen"; });
     // trying to get eraser not to remove background image
