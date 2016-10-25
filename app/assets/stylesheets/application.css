@@ -359,17 +359,15 @@ a.no-fav {
 
   /* Homepage banner */
   body.welcome {
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
   }
 
   .welcome h2 {
     font-size: 2.2em;
-    color: white;
-    text-shadow: 2px 2px black;
   }
   .welcome h3 {
     font-size: 1.6em;
-    color: white;
-    text-shadow: 2px 2px black;
   }
 }
