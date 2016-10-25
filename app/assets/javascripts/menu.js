@@ -28,9 +28,9 @@ $( document ).ready(function() {
     }
 
     $(".mobile-icon").click(toggleDropdown);
-    //$(".mobile-icon").click(function(event){
-     // event.preventDefault();
-    //});
+    $(".mobile-icon").click(function(e){
+     e.preventDefault();
+    });
     $(window).resize(function(){
           hideDiv();
     });
