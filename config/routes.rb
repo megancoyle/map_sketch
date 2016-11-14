@@ -8,5 +8,6 @@ Rails.application.routes.draw do
       delete 'remove_favorite'
     end
   end
+  get 'favorites' => 'favorites#index' 
   root 'welcome#index'
 end

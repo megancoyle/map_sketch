@@ -1,0 +1,13 @@
+<h1>Favorites</h1>
+
+<div class="all-maps">
+  <% if @user_favorites.present? == false %>
+    <p>You need to add a favorite in order to see it appear here. Get started by taking a look at the <%= link_to 'Drawings page', drawings_path %>.</p>
+  <% end %>
+  <% @user_favorites.sort { |a,b| a.title <=> b.title }.each do |drawing| %>
+    <div class="map-grid">
+      <%= link_to (image_tag drawing.image), drawing_path(drawing) %>
+      <h3><%= link_to drawing.title, drawing_path(drawing) %></h3>
+    </div>
+  <% end %>
+</div>
