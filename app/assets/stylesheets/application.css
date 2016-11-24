@@ -199,8 +199,8 @@ input#clear {
 }
 
 .all-maps {
-  text-align: center;
   padding-top: 50px;
+  text-align: center;
 }
 
 /* Notes */
@@ -314,6 +314,26 @@ a.no-fav {
 
 .fav:visited, .no-fav:visited {
   text-decoration: none;
+}
+
+/* Profile Page */
+.feature-icon {
+    display: inline-block;
+    max-width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+}
+.feature-icon img {
+    display: block;
+    margin: auto;
+    max-width: 80px;
+}
+.icon-row {
+    text-align: center;
+}
+.feature img {
+    max-width: 50px;
 }
 
 /* Styles for mobile devices */

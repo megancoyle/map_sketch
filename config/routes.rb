@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     end
   end
   get 'favorites' => 'favorites#index'
-  get 'creates' => 'creates#index' 
+  get 'creates' => 'creates#index'
+  get "/pages/:page" => "pages#show"
   root 'welcome#index'
 end
