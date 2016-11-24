@@ -1,6 +1,6 @@
 class Drawing < ApplicationRecord
   has_many :notes, dependent: :destroy
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
   has_many :users, through: :favorites, dependent: :destroy
   validates :title, presence: true
   belongs_to :user, optional: true
