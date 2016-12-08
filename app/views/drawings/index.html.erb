@@ -3,7 +3,8 @@
   <%= link_to 'Make a New Drawing', drawings_get_address_path, :class => 'get-started' %>
 
   <div class="all-maps">
-    <% @drawings.sort { |a,b| a.title <=> b.title }.each do |drawing| %>
+    <p>Sort by: <%= link_to "Title", "?sort=title" %> | <%= link_to "Recently Added", "?sort=created_at" %></p>
+    <% @drawings.each do |drawing| %>
       <div class="map-grid">
         <%= link_to (image_tag drawing.image), drawing_path(drawing) %>
         <h3><%= link_to drawing.title, drawing_path(drawing) %></h3>

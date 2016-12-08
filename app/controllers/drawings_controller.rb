@@ -1,7 +1,13 @@
 class DrawingsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
   def index
-    @drawings = Drawing.all
+    @drawings = if params[:sort] == 'created_at'
+      Drawing.all.order(:created_at).reverse
+    elsif params[:sort] == 'title'
+      Drawing.all.order(:title)
+    else
+      Drawing.all.order(:title)
+    end
   end
 
   def show
