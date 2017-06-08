@@ -2,6 +2,7 @@
 /tmp/*
 /log/*
 /public/uploads/*
+/log/development.log
 
 # Ignore application configuration
 /config/application.yml
