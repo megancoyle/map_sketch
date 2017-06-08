@@ -53,33 +53,34 @@ $(".drawings.new").ready(function() {
       iLastY = iY;
     }
   };
-
+  
+  // set default mode
   var mode="pen";
-  $(".jscolor").click(function(){ mode="pen"; });
 
-  // trying to get eraser not to remove background image
-  $("#eraser").click(function(e){
-    e.preventDefault();
-    canvas.style.backgroundImage = img.src;
-    mode="eraser";
-  });
+  var jsColor = document.getElementsByClassName('jscolor');
+  for (var i = 0; i < jsColor.length; i++) {
+    mode = 'pen';
+  }
 
-  $("#color").click(function(e){
+  document.getElementById('color').addEventListener('click', function(e){
     e.preventDefault();
   });
 
-  $("#clear").click(function(e){
+  // clear drawing
+  document.getElementById('clear').addEventListener('click', function(e){
     e.preventDefault();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(img,0,0);
     img.src = window.mapImgUrl;
   });
 
+  // changing the stroke width
   var strokeControls = document.getElementById('stroke-width');
-    $("#stroke-width").on("input", function() {
+    strokeControls.addEventListener('input', function() {
     strokeWidth = strokeControls.value;
   });
 
+  // changing the stroke color
   var strokeColor = '#' + document.getElementById('color_value').value;
   var colorPicker = document.getElementById('color_value');
 
