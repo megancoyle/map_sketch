@@ -1,11 +1,13 @@
-<h1>Created By You</h1>
+<h1>What Will You Create Today?</h1>
 <div class="space-layout">
+  <%= link_to 'Make a New Drawing', drawings_get_address_path, :class => 'get-started' %>
+  <div class="all-maps">
+  <h2>Drawings Created By You</h2>
   <div class="icon-row">
     <div class="feature-icon feature">
       <img src="/images/making.png" alt="Made by You">
     </div>
   </div>
-  <div class="all-maps">
     <% if @user_created.present? == false %>
       <p>You need to create a drawing so you can see what you've created here. Get started by taking a look at the <%= link_to 'Drawings page', drawings_path %>.</p>
     <% end %>
