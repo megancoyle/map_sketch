@@ -17,8 +17,16 @@
           <%= link_to 'Featured', drawings_path, :class => current_class?(drawings_path) %>
           <% if user_signed_in? %>
           <%= link_to 'My Drawings', creates_path, :class => current_class?(creates_path) %>
-          <%= link_to 'Profile', '/pages/profile', :class => current_class?('/pages/profile') %>
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+          <%= link_to favorites_path, title: "Favorites", :class => current_class?(favorites_path)  do %>
+            <%= fa_icon 'heart fa-1' %>
+          <% end %>
+          <div class="dropdown">
+            <%= fa_icon 'user-o fa-1' %>
+            <div class="dropdown-content">
+            <%= link_to 'Profile', edit_user_registration_path, :class => current_class?(edit_user_registration_path) %>
+              <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+            </div>
+          </div>
           <% else %>
           <%= link_to 'Sign up', new_user_registration_path, :class => current_class?(new_user_registration_path)  %>
           <%= link_to 'Login', new_user_session_path, :class => current_class?(new_user_session_path)  %>
@@ -35,6 +43,8 @@
           <% if user_signed_in? %>
           <%= link_to 'My Drawings', creates_path, :class => current_class?(creates_path) %>
           <%= link_to 'Profile', '/pages/profile', :class => current_class?('/pages/profile') %>
+          <%= link_to 'Favorites', favorites_path, :class => current_class?(favorites_path) %>
+          <%= link_to 'Profile', edit_user_registration_path, :class => current_class?(edit_user_registration_path) %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
           <% else %>
           <%= link_to 'Sign up', new_user_registration_path, :class => current_class?(new_user_registration_path)  %>

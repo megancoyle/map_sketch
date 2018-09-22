@@ -1,8 +1,8 @@
 /*
  *= require font-awesome
  */
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
-@import url("https://fonts.googleapis.com/css?family=Catamaran");
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400, 700");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400,500,700");
 
 canvas {
   border: 1px solid black;
@@ -40,6 +40,44 @@ nav a {
 
 nav .active {
   color: gray;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: auto;
+  right: 0;
+  background-color: #f1f1f1;
+  min-width: 80px;
+  margin-top: 5px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 0.8em;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Mobile Menu */
@@ -87,6 +125,12 @@ h5 {
 }
 
 /* Design Elements for Functionality */
+.main-nav .fa:before {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 1em;
+}
+
 .fa:before {
   margin-right: 5px;
   margin-left: 20px;
