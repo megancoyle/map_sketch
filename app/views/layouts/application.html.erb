@@ -12,7 +12,7 @@
         <h1 id="logo"><%= link_to 'mapsketch', root_path %></h1>
         <nav class="main-nav">
           <% if current_user.try(:admin?) %>
-          <%= link_to 'All Drawings', '/admin' %>
+          <%= link_to 'Blocked', '/admin' %>
           <% end %>
           <%= link_to 'Featured', drawings_path %>
           <% if user_signed_in? %>
@@ -29,7 +29,7 @@
       <div class="mobile-menu">
         <nav class="mobile-navigation">
           <% if current_user.try(:admin?) %>
-          <%= link_to 'All Drawings', '/admin' %>
+          <%= link_to 'Blocked', '/admin' %>
           <% end %>
           <%= link_to 'Featured', drawings_path %>
           <% if user_signed_in? %>

@@ -1,13 +1,16 @@
-<h1>All Drawings</h1>
+<h1>Blocked</h1>
+<h2>Drawings that aren't being showcased</h2>
 <div class="space-layout">
   <% if current_user.try(:admin?) %>
   <div class="all-maps">
     <p>Sort by: <%= link_to "Title", "?sort=title" %> | <%= link_to "Recently Added", "?sort=created_at" %></p>
     <% @drawings.each do |drawing| %>
+      <% if drawing.showcase == false %>
       <div class="map-grid">
         <%= link_to (image_tag drawing.image), drawing_path(drawing) %>
         <h3><%= link_to drawing.title, drawing_path(drawing) %></h3>
       </div>
+      <% end %>
     <% end %>
   </div>
   <% end %>
