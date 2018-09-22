@@ -1,19 +1,19 @@
 /*
  *= require font-awesome
  */
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
-@import url(https://fonts.googleapis.com/css?family=Catamaran:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:400, 700);
+@import url(https://fonts.googleapis.com/css?family=Catamaran:400, 700, 300);
 
 canvas {
   border: 1px solid black;
   cursor: default;
 }
 
- /* Header and Nav */
- /*header, footer {
+/* Header and Nav */
+/*header, footer {
    background: #ff8080;
  }*/
- h1#logo {
+h1#logo {
   margin: 0;
   display: inline-block;
   padding: 10px 0;
@@ -27,7 +27,7 @@ canvas {
 nav {
   float: right;
   padding-top: 20px;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-transform: lowercase;
 }
 nav a {
@@ -39,25 +39,26 @@ nav a {
 }
 
 /* Mobile Menu */
-.mobile-icon, .mobile-menu {
-    display: none;
+.mobile-icon,
+.mobile-menu {
+  display: none;
 }
 
 /* Main Content */
 body {
   padding: 0;
   margin: 0;
-  background: url('/images/drafting.jpg');
+  background: url("/images/drafting.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
 }
 .content {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   padding: 20px;
   margin-top: 15px;
   min-height: 500px;
@@ -71,25 +72,29 @@ body {
 a {
   text-decoration: none;
 }
-h1, h2, h3, h4, h5 {
-  font-family: 'Quicksand', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Quicksand", sans-serif;
   text-transform: lowercase;
   text-align: center;
 }
 
 /* Design Elements for Functionality */
 .fa:before {
-    margin-right: 5px;
-    margin-left: 20px;
+  margin-right: 5px;
+  margin-left: 20px;
 }
- /*plus sign styling */
+/*plus sign styling */
 .fa-plus-circle:before {
-    margin-left: 0 !important;
+  margin-left: 0 !important;
 }
 
 /* Homepage */
 body.welcome {
-  background: url('/images/sketch.jpg');
+  background: url("/images/sketch.jpg");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -109,7 +114,7 @@ body.welcome {
   font-weight: 300;
 }
 .welcome .content {
-    background: transparent;
+  background: transparent;
 }
 .banner {
   max-width: 600px;
@@ -120,22 +125,22 @@ body.welcome {
 
 /* Drawing Page */
 input#stroke-width {
-    width: 80px;
-    padding: 3px;
-    margin: 0 10px;
-    border: none;
+  width: 80px;
+  padding: 3px;
+  margin: 0 10px;
+  border: none;
 }
 
 input#color {
-    width: 60px;
-    height: 40px;
-    border: none;
+  width: 60px;
+  height: 40px;
+  border: none;
 }
 
 input#clear {
-    height: 40px;
-    width: 60px;
-    border: none;
+  height: 40px;
+  width: 60px;
+  border: none;
 }
 .controls {
   margin-top: -10px;
@@ -159,7 +164,7 @@ input#clear {
 
 .description {
   margin-top: 10px;
-  padding-top:20px;
+  padding-top: 20px;
   border-bottom: 1px solid #ff8080;
   padding-bottom: 20px;
   margin-bottom: 30px;
@@ -184,18 +189,18 @@ input#clear {
 }
 
 .map-grid p {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 
 .map-grid h3 {
-    font-size: 20px;
-    margin-top: -10px;
+  font-size: 20px;
+  margin-top: -10px;
 }
 .map-grid a {
   color: black;
 }
 .map-grid a:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .all-maps {
@@ -242,22 +247,29 @@ a.get-started:hover {
   padding: 20px;
   margin: 0 auto;
 }
-.form-block input, .form-block select {
+.form-block input,
+.form-block select {
   height: 30px;
 }
 .form-block textarea {
   height: 60px;
 }
 
-.form-block input, .form-block textarea, .form-block select {
-    width: 100%;
-    border: 1px solid #ff8080;
-    padding: 0 10px;
-    margin-top: 10px;
-    font-size: 14px;
-    -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-        box-sizing: border-box;
+.form-block input,
+.form-block textarea,
+.form-block select {
+  width: 100%;
+  border: 1px solid #ff8080;
+  padding: 0 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="radio"] {
+  width: auto;
+  height: auto;
 }
 
 .form-block input[type="submit"] {
@@ -275,17 +287,16 @@ a.get-started:hover {
 }
 .form-block input[type="submit"]:hover {
   background: #ff4d4d;
-  border: 1px solid #ff4d4d;;
+  border: 1px solid #ff4d4d;
   color: white;
 }
 
-.form-block input[type='checkbox'] {
+.form-block input[type="checkbox"] {
   width: auto;
 }
 .form-block .field {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
-
 
 /* Notification Messages */
 .flash {
@@ -293,8 +304,12 @@ a.get-started:hover {
   padding: 1em;
 }
 
-.alert  { color: red;  }
-.notice { color: blue; }
+.alert {
+  color: red;
+}
+.notice {
+  color: blue;
+}
 #error_explanation {
   color: red;
 }
@@ -312,28 +327,29 @@ a.no-fav {
   padding-left: 10px;
 }
 
-.fav:visited, .no-fav:visited {
+.fav:visited,
+.no-fav:visited {
   text-decoration: none;
 }
 
 /* Profile Page */
 .feature-icon {
-    display: inline-block;
-    max-width: 300px;
-    margin-left: 20px;
-    margin-right: 20px;
-    text-align: center;
+  display: inline-block;
+  max-width: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
 }
 .feature-icon img {
-    display: block;
-    margin: auto;
-    max-width: 80px;
+  display: block;
+  margin: auto;
+  max-width: 80px;
 }
 .icon-row {
-    text-align: center;
+  text-align: center;
 }
 .feature img {
-    max-width: 50px;
+  max-width: 50px;
 }
 
 /* Styles for mobile devices */
@@ -349,29 +365,29 @@ a.no-fav {
 @media screen and (max-width: 620px) {
   /* Mobile Menu Styles */
 
-	.mobile-icon {
-		display: block;
-		}
-	.mobile-icon img {
-    	float: right;
-    	height: 50px;
-    	margin-top: -60px;
-    	padding-right: 20px;
-    	width: 30px;
-	}
-	.mobile-menu a {
-	  text-transform: lowercase;
+  .mobile-icon {
+    display: block;
+  }
+  .mobile-icon img {
+    float: right;
+    height: 50px;
+    margin-top: -60px;
+    padding-right: 20px;
+    width: 30px;
+  }
+  .mobile-menu a {
+    text-transform: lowercase;
     display: block;
     clear: both;
-	}
-	.mobile-navigation {
-		background-color: rgba(255, 255, 255, 0.5);
+  }
+  .mobile-navigation {
+    background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
     margin: 0;
     text-align: center;
     padding-top: 0;
     padding-bottom: 10px;
-	}
+  }
 
   .main-nav {
     display: none;

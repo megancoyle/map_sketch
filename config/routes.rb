@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   end
   get 'favorites' => 'favorites#index'
   get 'creates' => 'creates#index'
-  get "/pages/:page" => "pages#show"
+  get 'admin' => 'drawings#admin_view'
+  get '/pages/:page' => 'pages#show'
   root 'welcome#index'
 end

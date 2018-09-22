@@ -5,10 +5,12 @@
   <div class="all-maps">
     <p>Sort by: <%= link_to "Title", "?sort=title" %> | <%= link_to "Recently Added", "?sort=created_at" %></p>
     <% @drawings.each do |drawing| %>
+      <% if drawing.showcase == true %>
       <div class="map-grid">
         <%= link_to (image_tag drawing.image), drawing_path(drawing) %>
         <h3><%= link_to drawing.title, drawing_path(drawing) %></h3>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>
