@@ -38,6 +38,10 @@ nav a {
   font-weight: 700;
 }
 
+nav .active {
+  color: gray;
+}
+
 /* Mobile Menu */
 .mobile-icon,
 .mobile-menu {
