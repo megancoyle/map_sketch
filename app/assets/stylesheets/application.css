@@ -70,14 +70,13 @@ nav .active {
   display: block;
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-visible {
+  display: block;
   background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+#profile:hover {
+  cursor: pointer;
 }
 
 /* Mobile Menu */

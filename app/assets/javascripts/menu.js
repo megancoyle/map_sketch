@@ -1,5 +1,25 @@
-/* Mobile Dropdown */
 $(document).ready(function() {
+  /* Desktop Menu Treatment */
+  var profile = $("#profile");
+  var dropdownContent = $(".dropdown-content");
+
+  profile.click(function() {
+    dropdownContent.toggle();
+  });
+
+  $(document).on("click", function(event) {
+    var trigger = profile[0];
+    var dropdown = dropdownContent;
+    if (
+      dropdown !== event.target &&
+      !dropdown.has(event.target).length &&
+      trigger !== event.target
+    ) {
+      dropdownContent.hide();
+    }
+  });
+
+  /* Mobile Dropdown */
   var isDropdownOpen = false;
   $(".mobile-menu").hide();
   hideDiv();
