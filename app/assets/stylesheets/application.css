@@ -243,6 +243,10 @@ input#clear {
   margin-bottom: 30px;
 }
 
+canvas#cvs {
+  cursor: pointer;
+}
+
 /* No Drawings */
 .no-drawings {
   border: 1px dashed #ddd;

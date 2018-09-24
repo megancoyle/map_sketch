@@ -1,5 +1,5 @@
 class DrawingsController < ApplicationController
-  before_action :authenticate_user!, :except => [:index, :show]
+  before_action :authenticate_user!, :except => [:index, :show, :get_address, :new]
   before_filter :authorize_admin, only: :admin_view
   before_filter :authorize_admin, only: :notification_view
 
