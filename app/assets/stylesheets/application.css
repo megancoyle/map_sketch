@@ -53,6 +53,7 @@ nav .active {
   transition: 0.3s;
   padding: 0 0 10px 0;
   border-bottom: 1px solid #ddd;
+  z-index: 20;
 }
 
 .welcome.index .navbar {
