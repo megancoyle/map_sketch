@@ -1,14 +1,12 @@
-<h1>What Will You Create Today?</h1>
 <div class="space-layout">
-  <%= link_to 'Make a New Drawing', drawings_get_address_path, :class => 'get-started' %>
-  <div class="all-maps">
-    <h2>Featured Drawings</h2>
-    <div class="icon-row">
-      <div class="feature-icon feature">
-        <img src="/images/location-pin.png" alt="Featured Drawings">
+    <h1>Featured Drawings</h1>
+      <div class="icon-row">
+        <div class="feature-icon feature">
+          <img src="/images/picture-frame.png" alt="Featured Drawings">
+        </div>
       </div>
-    </div>
-    <p>Sort by: <%= link_to "Title", "?sort=title" %> | <%= link_to "Recently Added", "?sort=created_at" %></p>
+  <div class="all-maps">
+    <%= render 'layouts/sort' %>
     <% @drawings.each do |drawing| %>
       <% if drawing.showcase == true %>
       <div class="map-grid">

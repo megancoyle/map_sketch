@@ -1,15 +1,18 @@
-<h1>What Will You Create Today?</h1>
-<div class="space-layout">
-  <%= link_to 'Make a New Drawing', drawings_get_address_path, :class => 'get-started' %>
-  <div class="all-maps">
-  <h2>Drawings Created By You</h2>
+<h1>Drawings Created By You</h1>
   <div class="icon-row">
     <div class="feature-icon feature">
       <img src="/images/making.png" alt="Made by You">
     </div>
   </div>
-    <% if @user_created.present? == false %>
-      <p>You need to create a drawing so you can see what you've created here. Get started by taking a look at the <%= link_to 'Drawings page', drawings_path %>.</p>
+<div class="space-layout">
+  <div class="all-maps">
+      <% if @user_created.present? == false %>
+        <div class="no-drawings">
+          <p>You need to create a drawing so you can see what you've created here. Get started by taking a look at the <%= link_to 'Drawings page', drawings_path %>.</p>
+        </div>
+       <% end %>
+    <% if @user_created.present? == true && @user_created.length > 1 %>
+      <%= render 'layouts/sort' %>
     <% end %>
     <% @user_created.sort { |a,b| a.title <=> b.title }.each do |drawing| %>
       <div class="map-grid">

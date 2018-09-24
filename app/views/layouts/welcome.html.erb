@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MapSketch</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <%= render 'layouts/header' %>
+  <body class="<%= controller_name %> <%= action_name %>">
+  <div class="welcome-banner">
+        <div class="container">
+            <% flash.each do |type, message| %>
+                <p class="flash <%= type %>"><%= message %></p>
+            <% end %>
+        </div>
+        <div class="welcome-text">
+            <h3>Find a place to go.</h3>
+            <h2>Map your path.</h2>
+        </div>
+  </div>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+    <%= render 'layouts/analytics' %>
+  </body>
+</html>

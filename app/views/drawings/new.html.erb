@@ -3,6 +3,11 @@
 <% end %>
 
 <h1>New Drawing</h1>
+<div class="icon-row">
+  <div class="feature-icon feature">
+    <img src="/images/pencil-ruler.png" alt="Start Drawing"/>
+  </div>
+</div>
 <div class="form-block">
 
   <%= form_for [@user, @drawing] do |f| %>
@@ -53,5 +58,5 @@
   <div id="new-image">
   </div>
 
-<%= link_to 'Back', drawings_path, :class => 'fa fa-arrow-left' %>
+<%= link_to 'Cancel', root_path %>
 </div>

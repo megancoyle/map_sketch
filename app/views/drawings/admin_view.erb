@@ -8,7 +8,7 @@
 <div class="space-layout">
   <% if current_user.try(:admin?) %>
   <div class="all-maps">
-    <p>Sort by: <%= link_to "Title", "?sort=title" %> | <%= link_to "Recently Added", "?sort=created_at" %></p>
+    <%= render 'layouts/sort' %>
     <% @drawings.each do |drawing| %>
       <% if drawing.showcase == false %>
       <div class="map-grid">
