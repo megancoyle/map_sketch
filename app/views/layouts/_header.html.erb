@@ -12,6 +12,11 @@
           <%= link_to favorites_path, title: "Favorites", :class => current_class?(favorites_path)  do %>
             <%= fa_icon 'heart fa-1' %>
           <% end %>
+          <% if current_user.try(:admin?) %>
+            <%= link_to '/notifications', title: "Notifications", :class => current_class?('/notifications')  do %>
+              <%= fa_icon 'bell fa-1' %>
+          <% end %>
+          <% end %>
           <div class="dropdown">
             <%= fa_icon 'user-o fa-1', :id => 'profile' %>
             <div class="dropdown-content">
@@ -37,6 +42,9 @@
           <%= link_to 'My Drawings', creates_path, :class => current_class?(creates_path) %>
           <%= link_to 'Profile', '/pages/profile', :class => current_class?('/pages/profile') %>
           <%= link_to 'Favorites', favorites_path, :class => current_class?(favorites_path) %>
+          <% if current_user.try(:admin?) %>
+            <%= link_to 'Notifications', '/notifications', :class => current_class?('/notifications') %>
+          <% end %>
           <%= link_to 'Profile', edit_user_registration_path, :class => current_class?(edit_user_registration_path) %>
           <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
           <% else %>

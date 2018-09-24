@@ -493,7 +493,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 660px) {
   /* Mobile Menu Styles */
 
   .mobile-icon {
@@ -536,8 +536,8 @@ footer a {
   }
 
   .welcome-text {
-    margin-top: 14%;
     text-align: center;
+    padding-top: 10%;
   }
 
   .welcome-text h2 {

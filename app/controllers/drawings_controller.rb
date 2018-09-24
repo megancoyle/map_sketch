@@ -1,6 +1,7 @@
 class DrawingsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
   before_filter :authorize_admin, only: :admin_view
+  before_filter :authorize_admin, only: :notification_view
 
   def index
     @drawings = if params[:sort] == 'created_at'
@@ -13,6 +14,16 @@ class DrawingsController < ApplicationController
   end
 
   def admin_view
+    @drawings = if params[:sort] == 'created_at'
+      Drawing.all.order(:created_at).reverse
+    elsif params[:sort] == 'title'
+      Drawing.all.order(:title)
+    else
+      Drawing.all.order(:title)
+    end
+  end
+
+  def notification_view
     @drawings = if params[:sort] == 'created_at'
       Drawing.all.order(:created_at).reverse
     elsif params[:sort] == 'title'
@@ -88,7 +99,7 @@ class DrawingsController < ApplicationController
 
   private
     def drawing_params
-      params.require(:drawing).permit(:title, :showcase, :description, :location, :image, :user)
+      params.require(:drawing).permit(:title, :showcase, :reviewed, :description, :location, :image, :user)
     end
 
 end

@@ -29,6 +29,15 @@
       <%= f.radio_button :showcase, false %>
       <%= label :showcase, 'No' %>
     </p>
+
+    <%= f.label :reviewed %>
+    <p>
+      <%= f.radio_button :reviewed, true %>
+      <%= label :reviewed, 'Yes' %>
+      
+      <%= f.radio_button :reviewed, false %>
+      <%= label :reviewed, 'No' %>
+    </p>
     <% end %>
 
     <p>

@@ -1,0 +1,21 @@
+<h1>Drawings to Review</h1>
+  <div class="icon-row">
+    <div class="feature-icon feature">
+      <img src="/images/write.png" alt="Review Drawings">
+    </div>
+  </div>
+<div class="space-layout">
+  <% if current_user.try(:admin?) %>
+  <div class="all-maps">
+    <%= render 'layouts/sort' %>
+    <% @drawings.each do |drawing| %>
+      <% if drawing.showcase == false && drawing.reviewed == false %>
+      <div class="map-grid">
+        <%= link_to (image_tag drawing.image), drawing_path(drawing) %>
+        <h3><%= link_to drawing.title, drawing_path(drawing) %></h3>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+  <% end %>
+</div>
