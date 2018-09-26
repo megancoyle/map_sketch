@@ -378,6 +378,9 @@ a.get-started:hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.form-block .form-warning {
+  border: 1px solid red;
+}
 input[type="radio"] {
   width: auto;
   height: auto;
