@@ -10,4 +10,16 @@ $(document).ready(function() {
       }
     });
   }
+
+  if ($(".new_drawing").length) {
+    $("form").on("submit", function() {
+      var drawingTitle = $("#drawing_title");
+      if (drawingTitle.val() == "") {
+        drawingTitle.addClass("form-warning");
+        return false;
+      } else {
+        drawingTitle.removeClass("form-warning");
+      }
+    });
+  }
 });
