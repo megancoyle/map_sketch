@@ -498,6 +498,8 @@ footer a {
   .col-3 {
     display: block;
     width: 100%;
+    padding: 0;
+    padding-bottom: 20px;
   }
 }
 
