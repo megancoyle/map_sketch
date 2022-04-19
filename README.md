@@ -46,6 +46,14 @@ For the images, I first used CarrierWave and AWS so users would have to right-cl
 
 The app requires a Google API key if you wish to fork it and work on your own version.
 
+To run locally:
+
+- `bundle install` to install dependencies
+- `bundle e rails db:setup` to setup the database
+- `bundle e rails db:migrate` if there are any pending migrations
+- `brew services start postgresql`
+- `bundle e rails s` to start the server locally
+
 ## Unsolved Problems/Next Steps
 
 - Email authentication for users who sign up by using ActionMailer
